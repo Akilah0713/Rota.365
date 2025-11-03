@@ -1,0 +1,186 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rota.365 - Reservas de Viagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img id="logoClaro" src="./image/./logo/logo_clara_47.png" alt="Logo clara">
+    <img id="logoEscuro" src="./image/./logo/logo_escura_se_lá.png" alt="Logo escura" style="display: none;">
+    <h1>Rota.365 - Agência de Viagens</h1>
+    <button id="modoEscuro">🌙</button>
+  </header>
+
+  <nav class="menu">
+  <div class="menu-container">
+    <div class="menu-logo">
+      <a href="index.html">Rota.365</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+    <ul id="menuLinks">
+      <li><a href="index.html">🏠 Início</a></li>
+      <li><a href="#nacionais">✈️ Nacionais</a></li>
+      <li><a href="#internacionais">🌍 Internacionais</a></li>
+      <li><a href="reserva.html">🧳 Reservas</a></li>
+      <li><a href="#contato">📞 Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <section class="carrossel">
+    <div class="carrossel-container">
+      <div class="slide ativo">
+        <img src="./image/carrossel/asa-de-aviao-e-por-sol-no-ceu-azul.jpg" alt="Destino 1">
+      </div>
+      <div class="slide">
+        <img src="./image/carrossel/ilustracao-de-um-voando-aviao.jpg" alt="Destino 2">
+      </div>
+      <div class="slide">
+        <img src="./image/carrossel/plano-que-passa-pelo-sol-em-um-dia-nublado.jpg" alt="Destino 3">
+      </div>
+      <button class="anterior">&#10094;</button>
+      <button class="proximo">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="anuncio">
+    <a class="anuncio-banner" href="https://www.latam.com/br/pt/" target="_blank">
+      <img src="https://picsum.photos/1200/250?random=20" alt="Anúncio de Viagem">
+      <div class="anuncio-texto">
+        <h2>🌴 Ofertas Imperdíveis!</h2>
+        <p>Descontos de até <strong>45%</strong> em pacotes nacionais. Aproveite antes que acabe!</p>
+      </div>
+    </a>
+  </section>
+
+
+  <main>
+    <h2>Destinos Disponíveis</h2>
+    <h2 id="nacionais">Viagens Nacionais</h2>
+
+    <section class="destinos">
+      <div class="card">
+        <img src="./image/./cidade/rio de janeiro.jpg" alt="Rio de Janeiro">
+        <h3>Rio de Janeiro</h3>
+        <p>Brasília → Rio de Janeiro = 1.160 km</p>
+        <p class="preco-novo">Executiva: R$ 928,00</p>
+        <p class="preco-antigo">Padrão: R$ 580,00</p>
+        <a href="reserva.html?destino=Rio%20de%20Janeiro">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/./cidade/icaraí.jpg" alt="Icaraí de Amontada">
+        <h3>Icaraí de Amontada</h3>
+        <p>Brasília → Icaraí de Amontada = 1.440 km</p>
+        <p class="preco-novo">Executiva: R$ 1.152,00</p>
+        <p class="preco-antigo">Padrão: R$ 720,00</p>
+        <a href="reserva.html?destino=Icara%C3%AD%20de%20Amontada">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/./cidade/Nobres.jpg" alt="Nobres">
+        <h3>Nobres</h3>
+        <p>Brasília → Nobres = 1.600 km</p>
+        <p class="preco-novo">Executiva: R$ 1.280,00</p>
+        <p class="preco-antigo">Padrão: R$ 800,00</p>
+        <a href="reserva.html?destino=Nobres">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/./cidade/rioGrandeDoSul.jpg" alt="Rio Grande do Sul">
+        <h3>Rio Grande do Sul</h3>
+        <p>Brasília → Rio Grande do Sul = 2.022 km</p>
+        <p class="preco-novo">Executiva: R$ 1.617,00</p>
+        <p class="preco-antigo">Padrão: R$ 1.011,00</p>
+        <a href="reserva.html?destino=Rio%20Grande%20do%20Sul">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/cidade/balneario.jpg" alt="balneario">
+        <h3>Balneário Camboriú</h3>
+        <p>Brasília → Balneário Camboriú = 1.596.6 km</p>
+        <p class="preco-novo">Executiva: R$ 1.276,00</p>
+        <p class="preco-antigo">Padrão: R$ 798,00</p>
+        <a href="reserva.html?destino=Balne%C3%A1rio%20Cambori%C3%BA">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/./cidade/jericoacoara.jpg" alt="Jericoacoara">
+        <h3>Jericoacoara</h3>
+        <p>Brasília → Jericoacoara = 2.096.4 km</p>
+        <p class="preco-novo">Executiva: R$ 1.676,00</p>
+        <p class="preco-antigo">Padrão: R$ 1.048,00</p>
+        <a href="reserva.html?destino=Jericoacoara">Reservar</a>
+      </div>
+    </section>
+
+    <section class="anuncio pequeno">
+      <a class="anuncio-banner" href="https://www.trivago.com.br" target="_blank">
+        <img src="https://picsum.photos/1000/200?random=50" alt="Anúncio Intermediário">
+        <div class="anuncio-texto">
+        <h3>🏨 Parceria com Trivago</h3>
+        <p>Reserve seu hotel com até 30% de desconto em viagens Rota.365.</p>
+        </div>
+      </a>
+    </section>
+
+
+    <h2 id="internacionais">Viagens Internacionais</h2>
+
+    <section class="destinos">
+      <div class="card">
+        <img src="./image/cidade/Veneza.2.jpg" alt="Veneza">
+        <h3>Veneza</h3>
+        <p>Brasília → Veneza = 7.454 km</p>
+        <p class="preco-novo">Executiva: R$ 5.963,00</p>
+        <p class="preco-antigo">Padrão: R$ 3.727,00</p>
+        <a href="reserva.html?destino=Veneza">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/./cidade/Tokyo.jpg" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Brasília → Tokyo = 16.808 km</p>
+        <p class="preco-novo">Executiva: R$ 13.446,00</p>
+        <p class="preco-antigo">Padrão: R$ 8.404,00</p>
+        <a href="reserva.html?destino=Tokyo">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./image/cidade/moscou.jpg" alt="Moscou">
+        <h3>Moscou</h3>
+        <p>Brasília → Moscou = 11.179 km</p>
+        <p class="preco-novo">Executiva: R$ 8.943,00</p>
+        <p class="preco-antigo">Padrão: R$ 5.588,00</p>
+        <a href="reserva.html?destino=Moscou">Reservar</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="anuncio rodape">
+  <a class="anuncio-banner" href="https://www.booking.com" target="_blank">
+    <img src="https://picsum.photos/1200/300?random=90" alt="Anúncio de Rodapé">
+    <div class="anuncio-texto">
+      <h3>🌎 Viaje com conforto e economia!</h3>
+      <p>Conheça nossos parceiros e garanta descontos exclusivos.</p>
+    </div>
+  </a>
+</section>
+
+
+  <footer id="contato">
+    <p>Contato: contato@rota365.com | Tel: (61) 4002-8922</p>
+    <p>Redes sociais: @rota365</p>
+    <p>Todos os Direitos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
