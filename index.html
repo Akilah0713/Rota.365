@@ -7,43 +7,55 @@
 </head>
 <body>
   <header>
-    <img id="logoClaro" src="./image/./logo/logo_clara_47.png" alt="Logo clara">
-    <img id="logoEscuro" src="./image/./logo/logo_escura_se_lá.png" alt="Logo escura" style="display: none;">
-    <h1>Rota.365 - Agência de Viagens</h1>
-    <button id="modoEscuro">🌙</button>
+    <a id="logoClaro" href="index.html"><img src="./imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.html" style="display: none;"><img src="./imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
+    <nav class="menu">
+       <div class="menu-container">
+        
+        <div class="menu-toggle" id="menuToggle">
+          ☰
+        </div>
+        
+        <ul id="menuLinks">
+          <li><a href="index.html">🏠 Início</a></li>
+          <li><a href="#nacionais">✈️ Nacionais</a></li>
+          <li><a href="#internacionais">🌍 Internacionais</a></li>
+          <li><a href="reservas.html">🧳 Reservas</a></li>
+          <li><a href="#contato">📞 Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu dropdown">
+      <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
+      <div class="dropdown-content">
+        <div class="logado d-none">
+          <a href="account.html">Minha conta</a>
+          <a href="reservas.html">Reservas</a>
+          <a href="sair">Sair </a>
+        </div>
+        <div class="deslogado">
+          <a href="login.html">Entrar</a>
+          <a href="criar-conta.html">Cadastrar</a>
+        </div>
+    </div>
+    
+    <button id="modoEscuro">
+      <img src="./imagens/">🌙</button>
   </header>
-
-  <nav class="menu">
-  <div class="menu-container">
-    <div class="menu-logo">
-      <a href="index.html">Rota.365</a>
-    </div>
-
-    <div class="menu-toggle" id="menuToggle">
-      ☰
-    </div>
-
-    <ul id="menuLinks">
-      <li><a href="index.html">🏠 Início</a></li>
-      <li><a href="#nacionais">✈️ Nacionais</a></li>
-      <li><a href="#internacionais">🌍 Internacionais</a></li>
-      <li><a href="reserva.html">🧳 Reservas</a></li>
-      <li><a href="#contato">📞 Contato</a></li>
-    </ul>
-  </div>
-</nav>
-
 
   <section class="carrossel">
     <div class="carrossel-container">
       <div class="slide ativo">
-        <img src="./image/carrossel/asa-de-aviao-e-por-sol-no-ceu-azul.jpg" alt="Destino 1">
+        <img src="./imagens/imagem.jpg" alt="Destino 1">
       </div>
       <div class="slide">
-        <img src="./image/carrossel/ilustracao-de-um-voando-aviao.jpg" alt="Destino 2">
+        <img src="./imagens/imagem-site.jpg" alt="Destino 2">
       </div>
       <div class="slide">
-        <img src="./image/carrossel/plano-que-passa-pelo-sol-em-um-dia-nublado.jpg" alt="Destino 3">
+        <img src="./imagens/imagens carroussel.jpg" alt="Destino 3">
+      </div>
+      <div class="slide">
+        <img src="./imagens/imagens-site.jpg" alt="Destino 4">
       </div>
       <button class="anterior">&#10094;</button>
       <button class="proximo">&#10095;</button>
@@ -54,7 +66,7 @@
     <a class="anuncio-banner" href="https://www.latam.com/br/pt/" target="_blank">
       <img src="https://picsum.photos/1200/250?random=20" alt="Anúncio de Viagem">
       <div class="anuncio-texto">
-        <h2>🌴 Ofertas Imperdíveis!</h2>
+        <h2>🌴 Ofertas Imperdiveís!</h2>
         <p>Descontos de até <strong>45%</strong> em pacotes nacionais. Aproveite antes que acabe!</p>
       </div>
     </a>
@@ -67,60 +79,86 @@
 
     <section class="destinos">
       <div class="card">
-        <img src="./image/./cidade/rio de janeiro.jpg" alt="Rio de Janeiro">
+        <img src="./imagens/cidade/rio de janeiro.jpg" alt="Rio de Janeiro">
         <h3>Rio de Janeiro</h3>
         <p>Brasília → Rio de Janeiro = 1.160 km</p>
         <p class="preco-novo">Executiva: R$ 928,00</p>
         <p class="preco-antigo">Padrão: R$ 580,00</p>
-        <a href="reserva.html?destino=Rio%20de%20Janeiro">Reservar</a>
+        <a href="reservas.html?destino=Rio%20de%20Janeiro">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/./cidade/icaraí.jpg" alt="Icaraí de Amontada">
+        <img src="./imagens/cidade/Salvador 2.jpg" alt="Salvador">
+        <h3>Salvador</h3>
+        <p>Brasília → Salvador = 1.089 km</p>
+        <p class="preco-novo">Executiva: R$ 579,00</p>
+        <p class="preco-antigo">Padrão: R$ 390,00</p>
+        <a href="reservas.html?destino=salvador">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Porto Alegre.jpg" alt="PortoAlegre">
+        <h3>Porto Alegre</h3>
+        <p>Brasília → Porto Alegre = 1.620 km</p>
+        <p class="preco-novo">Executiva: R$ 750,00</p>
+        <p class="preco-antigo">Padrão: R$ 300,00</p>
+        <a href="reservas.html?destino=salvador">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Esapirito santos.jpg" alt="Espirito Santo">
+        <h3>Espirito Santo</h3>
+        <p>Brasília → Espirito Santo = 940 km</p>
+        <p class="preco-novo">Executiva: R$ 600,00</p>
+        <p class="preco-antigo">Padrão: R$ 250,00</p>
+        <a href="reservas.html?destino=espiritosanto">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/icaraí.jpg" alt="Icaraí de Amontada">
         <h3>Icaraí de Amontada</h3>
         <p>Brasília → Icaraí de Amontada = 1.440 km</p>
         <p class="preco-novo">Executiva: R$ 1.152,00</p>
         <p class="preco-antigo">Padrão: R$ 720,00</p>
-        <a href="reserva.html?destino=Icara%C3%AD%20de%20Amontada">Reservar</a>
+        <a href="reservas.html?destino=Icara%C3%AD%20de%20Amontada">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/./cidade/Nobres.jpg" alt="Nobres">
+        <img src="./imagens/cidade/Nobres.jpg" alt="Nobres">
         <h3>Nobres</h3>
         <p>Brasília → Nobres = 1.600 km</p>
         <p class="preco-novo">Executiva: R$ 1.280,00</p>
         <p class="preco-antigo">Padrão: R$ 800,00</p>
-        <a href="reserva.html?destino=Nobres">Reservar</a>
+        <a href="reservas.html?destino=Nobres">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/./cidade/rioGrandeDoSul.jpg" alt="Rio Grande do Sul">
+        <img src="./imagens/cidade/rioGrandeDoSul.jpg" alt="Rio Grande do Sul">
         <h3>Rio Grande do Sul</h3>
         <p>Brasília → Rio Grande do Sul = 2.022 km</p>
         <p class="preco-novo">Executiva: R$ 1.617,00</p>
         <p class="preco-antigo">Padrão: R$ 1.011,00</p>
-        <a href="reserva.html?destino=Rio%20Grande%20do%20Sul">Reservar</a>
+        <a href="reservas.html?destino=Rio%20Grande%20do%20Sul">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/cidade/balneario.jpg" alt="balneario">
+        <img src="./imagens/cidade/balneario.jpg" alt="balneario">
         <h3>Balneário Camboriú</h3>
         <p>Brasília → Balneário Camboriú = 1.596.6 km</p>
         <p class="preco-novo">Executiva: R$ 1.276,00</p>
         <p class="preco-antigo">Padrão: R$ 798,00</p>
-        <a href="reserva.html?destino=Balne%C3%A1rio%20Cambori%C3%BA">Reservar</a>
+        <a href="reservas.html?destino=Balne%C3%A1rio%20Cambori%C3%BA">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/./cidade/jericoacoara.jpg" alt="Jericoacoara">
+        <img src="./imagens/cidade/jericoacoara.jpg" alt="Jericoacoara">
         <h3>Jericoacoara</h3>
         <p>Brasília → Jericoacoara = 2.096.4 km</p>
         <p class="preco-novo">Executiva: R$ 1.676,00</p>
         <p class="preco-antigo">Padrão: R$ 1.048,00</p>
-        <a href="reserva.html?destino=Jericoacoara">Reservar</a>
+        <a href="reservas.html?destino=Jericoacoara">Reservar</a>
       </div>
     </section>
-
     <section class="anuncio pequeno">
       <a class="anuncio-banner" href="https://www.trivago.com.br" target="_blank">
         <img src="https://picsum.photos/1000/200?random=50" alt="Anúncio Intermediário">
@@ -131,35 +169,87 @@
       </a>
     </section>
 
-
     <h2 id="internacionais">Viagens Internacionais</h2>
-
     <section class="destinos">
       <div class="card">
-        <img src="./image/cidade/Veneza.2.jpg" alt="Veneza">
+        <img src="./imagens/cidade/Veneza.jpg" alt="Veneza">
         <h3>Veneza</h3>
         <p>Brasília → Veneza = 7.454 km</p>
         <p class="preco-novo">Executiva: R$ 5.963,00</p>
         <p class="preco-antigo">Padrão: R$ 3.727,00</p>
-        <a href="reserva.html?destino=Veneza">Reservar</a>
+        <a href="reservas.html?destino=Veneza">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/./cidade/Tokyo.jpg" alt="Tokyo">
+        <img src="./imagens/cidade/Seoul 2.jpg" alt="Seoul">
+        <h3>Seoul</h3>
+        <p>Brasília → Seoul = 17.620 km</p>
+        <p class="preco-novo">Executiva: R$ 9.000,00</p>
+        <p class="preco-antigo">Padrão: R$ 5.000,00</p>
+        <a href="reservas.html?destino=seoul">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Istambul.jpg" alt="Istambul">
+        <h3>Istambul</h3>
+        <p>Brasília → Istambul = 10.095 km</p>
+        <p class="preco-novo">Executiva: R$ 6.500,00</p>
+        <p class="preco-antigo">Padrão: R$ 3.000,00</p>
+        <a href="reservas.html?destino=istambul">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Paris 2.jpg" alt="Paris">
+        <h3>Paris</h3>
+        <p>Brasília → Paris = 8.700 km</p>
+        <p class="preco-novo">Executiva: R$ 7.000,00</p>
+        <p class="preco-antigo">Padrão: R$ 4.800,00</p>
+        <a href="reservas.html?destino=paris">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Orlando 2.jpg" alt="Orlando">
+        <h3>Orlando</h3>
+        <p>Brasília → Orlando = 8.700 km</p>
+        <p class="preco-novo">Executiva: R$ 4.500,00</p>
+        <p class="preco-antigo">Padrão: R$ 2.700,00</p>
+        <a href="reservas.html?destino=orlando">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/singapura.jpg" alt="singapura">
+        <h3>Singapura</h3>
+        <p>Brasília → Singapura = 8.700 km</p>
+        <p class="preco-novo">Executiva: R$ 8.800,00</p>
+        <p class="preco-antigo">Padrão: R$ 7.600,00</p>
+        <a href="reservas.html?destino=singapura">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Dubai 2.jpg" alt="Dubai">
+        <h3>Dubai</h3>
+        <p>Brasília → Dubai = 12.059 km</p>
+        <p class="preco-novo">Executiva: R$ 7.200,00</p>
+        <p class="preco-antigo">Padrão: R$ 3.500,00</p>
+        <a href="reservas.html?destino=dubai">Reservar</a>
+      </div>
+
+      <div class="card">
+        <img src="./imagens/cidade/Tokyo.jpg" alt="Tokyo">
         <h3>Tokyo</h3>
         <p>Brasília → Tokyo = 16.808 km</p>
         <p class="preco-novo">Executiva: R$ 13.446,00</p>
         <p class="preco-antigo">Padrão: R$ 8.404,00</p>
-        <a href="reserva.html?destino=Tokyo">Reservar</a>
+        <a href="reservas.html?destino=Tokyo">Reservar</a>
       </div>
 
       <div class="card">
-        <img src="./image/cidade/moscou.jpg" alt="Moscou">
+        <img src="./imagens/cidade/moscou.jpg" alt="Moscou">
         <h3>Moscou</h3>
         <p>Brasília → Moscou = 11.179 km</p>
         <p class="preco-novo">Executiva: R$ 8.943,00</p>
         <p class="preco-antigo">Padrão: R$ 5.588,00</p>
-        <a href="reserva.html?destino=Moscou">Reservar</a>
+        <a href="reservas.html?destino=Moscou">Reservar</a>
       </div>
     </section>
   </main>

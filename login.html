@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a id="logoClaro" href="index.html"><img src="./imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.html" style="display: none;"><img src="./imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
+    <nav class="menu">
+       <div class="menu-container">
+        
+        <div class="menu-toggle" id="menuToggle">
+          ☰
+        </div>
+        
+        <ul id="menuLinks">
+          <li><a href="index.html">🏠 Início</a></li>
+          <li><a href="#nacionais">✈️ Nacionais</a></li>
+          <li><a href="#internacionais">🌍 Internacionais</a></li>
+          <li><a href="reserva.html">🧳 Reservas</a></li>
+          <li><a href="#contato">📞 Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu dropdown">
+      <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
+      <div class="dropdown-content">
+        <div class="logado d-none">
+          <a href="account.html">Minha conta</a>
+          <a href="reservas.html">Reservas</a>
+          <a href="sair">Sair </a>
+        </div>
+        <div class="deslogado">
+          <a href="login.html">Entrar</a>
+          <a href="criar-conta.html">Cadastrar</a>
+        </div>
+    </div>
+    <button id="modoEscuro">🌙</button>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="card login">
+          <h2>Acesse sua conta</h2>
+          <p>Informe seus dados para continuar</p>
+          <form>
+            <label>Email:</label>
+            <input type="email" id="nome" required placeholder="Email*"></header>
+
+            <label>Senha:</label>
+            <input type="password" id="nome" required placeholder="Senha*">
+
+            <button id="acessar">Acessar conta</button>
+          </form>
+        </div>
+        <div class="card cadastro">
+          <img src="imagens/usuarios.png">
+          <h2>Novo por aqui?</h2>
+          <p>Crie sua conta e aproveite todos os benefícios de ser um cliente Rota.365</p>
+          <a href="criar-conta.html" id="criar">Criar conta</a>
+        </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

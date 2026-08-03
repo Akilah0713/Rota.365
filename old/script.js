@@ -187,102 +187,60 @@ document.addEventListener('DOMContentLoaded', atualizarSimulacao);
 // LÓGICA DO BOTÃO DE CONFIRMAÇÃO
 // =========================================================
 
-const sessaoFormulario = document.querySelector('#formularioReserva');
-const formulario = document.querySelector("#formularioReserva form");
+const btnConfirmar = document.getElementById("confirmar");
 
-if (formulario) {
-  formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nome = nomeInput ? nomeInput.value.trim() : "";
-    const dataPartida = dataInput ? dataInput.value : "";
-
-    const destinoOption =
-      destinoSelect.options[destinoSelect.selectedIndex];
-
+if (btnConfirmar) {
+  btnConfirmar.addEventListener("click", () => {
+    
+    const nome = nomeInput ? nomeInput.value.trim() : '';
+    const dataPartida = dataInput ? dataInput.value : ''; 
+    const destinoOption = destinoSelect.options[destinoSelect.selectedIndex];
     const destinoSelecionado = destinoOption.text;
     const kmString = destinoOption.getAttribute("data-km");
-
     const passageirosString = passageirosInput.value;
     const assento = assentoSelect.value;
-
     const resultado = document.getElementById("resultado");
+    const formulario = document.getElementById("formularioReserva");
 
-    // Validação de existência do container de resultado
-    if (!resultado) {
-      console.error("Elemento #resultado não encontrado.");
+    // 1. Validação de campos vazios (usamos o required do HTML, mas o JS é um fallback)
+    if (!nome || !dataPartida || destinoOption.value === "" || !passageirosString || !assento) {
+      erroP.textContent = "Por favor, preencha todos os campos obrigatórios!";
       return;
     }
-
-    // 1. Validação dos campos
-    if (
-      !nome ||
-      !dataPartida ||
-      destinoOption.value === "" ||
-      !passageirosString ||
-      !assento
-    ) {
-      erroP.textContent =
-        "Por favor, preencha todos os campos obrigatórios!";
-      return;
-    }
-
-    // 2. Validação da data
+    
+    // 2. Validação da data (deve ser futura/atual)
     const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
-
-    const dataSelecionada = new Date(dataPartida);
-
+    hoje.setHours(0, 0, 0, 0); 
+    const dataSelecionada = new Date(dataPartida.replace(/-/g, '/')); 
+    
     if (dataSelecionada < hoje) {
-      erroP.textContent =
-        "A data de partida deve ser igual ou posterior à data atual.";
-      return;
+        erroP.textContent = "A data de partida deve ser igual ou posterior à data atual.";
+        return;
     }
 
-    // 3. Cálculo do preço
-    const {
-      precoPorPessoa,
-      totalViagem,
-      numPassageiros,
-      kmBruto,
-    } = calcularPreco(
-      kmString,
-      passageirosString,
-      assento
-    );
+    // 3. Realiza o cálculo final
+    const { precoPorPessoa, totalViagem, numPassageiros, kmBruto } = calcularPreco(kmString, passageirosString, assento);
 
     if (precoPorPessoa <= 0) {
-      erroP.textContent =
-        "Erro no cálculo de preço. Verifique os dados informados.";
-      return;
+        erroP.textContent = "Erro no cálculo de preço. Verifique se os dados de quilometragem e passageiros são válidos.";
+        return;
     }
 
-    // 4. Verificação da capacidade
+    // NOVO: 4. Verificação de Capacidade
     if (numPassageiros > CAPACIDADE_ASSENTOS[assento]) {
-      erroP.textContent = `Desculpe, há apenas ${CAPACIDADE_ASSENTOS[assento]} assentos ${assento.toUpperCase()} disponíveis.`;
-      return;
+        erroP.textContent = `Desculpe, há apenas ${CAPACIDADE_ASSENTOS[assento]} assentos ${assento.toUpperCase()} disponíveis para a sua reserva.`;
+        return;
     }
 
     erroP.textContent = "";
 
-    // 5. Formatação
-    const precoPorPessoaFormatado =
-      precoPorPessoa.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      });
-
-    const totalViagemFormatado =
-      totalViagem.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      });
-
-    const dataFormatada =
-      dataSelecionada.toLocaleDateString("pt-BR");
-
-    // 6. Exibe resultado
-    sessaoFormulario.classList.add("oculto");
+    // 5. Formata os valores finais e a data
+    const precoPorPessoaFormatado = precoPorPessoa.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const totalViagemFormatado = totalViagem.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const dataFormatada = new Date(dataPartida.replace(/-/g, '/')).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    
+    // 6. Exibe o Resultado
+    formulario.classList.add("oculto");
     resultado.classList.remove("oculto");
 
     resultado.innerHTML = `
@@ -292,28 +250,23 @@ if (formulario) {
       <p><strong>Data de Partida:</strong> ${dataFormatada}</p>
       <p><strong>Passageiros:</strong> ${numPassageiros}</p>
       <p><strong>Assento:</strong> ${assento.toUpperCase()}</p>
-      <h3 style="margin:15px 0;">Preço por Pessoa: ${precoPorPessoaFormatado}</h3>
-      <p style="font-size:16px;">Total da Reserva: <strong>${totalViagemFormatado}</strong></p>
+      <h3 style="margin: 15px 0;">Preço por Pessoa: ${precoPorPessoaFormatado}</h3>
+      <p style="font-size: 16px;">Total da Reserva: <strong>${totalViagemFormatado}</strong></p>
       <button id="novaReserva">Fazer nova reserva</button>
     `;
 
-    // 7. Nova reserva
-    document
-      .getElementById("novaReserva")
-      .addEventListener("click", () => {
-        sessaoFormulario.classList.remove("oculto");
-        resultado.classList.add("oculto");
-
-        nomeInput.value = "";
-        dataInput.value = "";
-        destinoSelect.value = "";
-        passageirosInput.value = "1";
-        assentoSelect.value = "";
-
-        atualizarSimulacao();
-
-        nomeInput.focus();
-      });
+    // 7. Evento de Nova Reserva
+    document.getElementById("novaReserva").addEventListener("click", () => {
+      formulario.classList.remove("oculto");
+      resultado.classList.add("oculto");
+      nomeInput.value = "";
+      if (dataInput) dataInput.value = ""; 
+      destinoSelect.value = "";
+      passageirosInput.value = "1"; 
+      assentoSelect.value = "";
+      atualizarSimulacao(); 
+      if (nomeInput) nomeInput.focus(); 
+    });
   });
 }
 

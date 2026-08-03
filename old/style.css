@@ -12,17 +12,13 @@
 }
 
 .dark {
-  --cor-fundo-claro: #17324d;
-  --cor-fundo-header: #0a0a27;
+  --cor-fundo-claro: #1c1c1c;
+  --cor-fundo-header: #2c2c2c;
   --cor-texto-claro: #f8f9fa;
   --cor-primaria: #69b4ff;
   --cor-secundaria: #adb5bd;
   --cor-acento: #4bd86a;
   --cor-sombra: rgba(255, 255, 255, 0.05);
-}
-
-.d-none{
-  display: none
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -100,10 +96,7 @@ header h1 { font-size: 24px;
   background: var(--cor-fundo-header);
   position: sticky; top: 0; 
   z-index: 999;
-  box-shadow: 0 2px 5px var(--cor-sombra);    
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  box-shadow: 0 2px 5px var(--cor-sombra);
 }
 
 .menu-container {
@@ -175,11 +168,9 @@ header h1 { font-size: 24px;
 }
 .slide { display: none; 
 }
-.slide img {
-  width: 100%; 
-  height: 600px; 
+.slide img { width: 100%; 
+  height: 400px; 
   object-fit: cover; 
-  display: block;
 }
 .ativo { display: block; 
 }
@@ -283,35 +274,34 @@ header h1 { font-size: 24px;
   text-align: center;
   box-shadow: 0 4px 12px var(--cor-sombra);
   transition: transform 0.3s, box-shadow 0.3s;
-  font-weight: bold;
 }
 .card:hover { 
   transform: translateY(-5px); 
   box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
 }
-.card img {  
-  width: 100%;
-  border-radius: 10px;
-  height: 200px;
-  object-fit: cover;
- }
+.card img { 
+  width: 100%; 
+  border-radius: 10px; 
+  height: 200px; 
+  object-fit: cover; 
+}
 .card h3 { 
   margin: 10px 0 5px; 
   font-size: 18px; 
 }
 .card p { 
-  font-size: 14px;
-  color: var(--cor-secundaria);
+  font-size: 14px; 
+  color: var(--cor-secundaria); 
   margin: 5px 0; 
 }
 .card a {
-  display: block;
-  margin-top: 10px;
+  display: block; 
+  margin-top: 10px; 
   padding: 10px 20px;
-  background: var(--cor-primaria);
-  color: #fff;
+  background: var(--cor-primaria); 
+  color: #fff; 
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none; 
   font-weight: 600;
 }
 .card a:hover { 
@@ -325,48 +315,10 @@ header h1 { font-size: 24px;
   text-decoration: line-through; 
   opacity: 0.7; 
 }
-.container {
-  display:flex;
-  align-items: stretch;
-  gap: 20px;
-}
-.login {
-  width: 500px;
-  height: 450px;
-}
-.login #acessar {
-    width: 100%;
-    height: 45px;
-    margin-top: 20px;
-    border-radius: 8px;
-    color: #1d1d38;
-    font-weight: bold;
-    cursor: pointer;
-    background: var(--cor-primaria);
-    color: #fff;
-}
-.cadastro {
-  width: 300px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-}
-.cadastro h2 {
-  margin: 0;
-}
-.cadastro #criar {
-  height: 40px;
-  width: 80%;
-  line-height: 40px;
-}
 
 /* =========================================
    FORMULÁRIO DE RESERVA
 ========================================= */
-
 #formularioReserva, #resultado {
   max-width: 600px; 
   margin: 40px auto; 
@@ -374,21 +326,10 @@ header h1 { font-size: 24px;
   background: var(--cor-fundo-header);
   border-radius: 15px; 
   box-shadow: 0 4px 12px var(--cor-sombra);
-  text-align:justify;
-  font-weight: bold;
+  text-align: center;
 }
-
-#formularioReserva form {
-  display: flex;
-  flex-direction: column;
-}
-
-#formularioReserva h3 {
-  color: #ffffff;
-}
-
 #formularioReserva input, #formularioReserva select {
-  width: auto; 
+  width: 100%; 
   padding: 12px; 
   border: 1px solid #ced4da;
   border-radius: 8px; 
@@ -431,225 +372,6 @@ header h1 { font-size: 24px;
   display: none !important; 
 }
 
-.card.login {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 10px;
-}
-
-.card.login p{
-  margin: 5px auto;
-}
-
-.card.login form {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.card.login h2 {
-  margin: 0 auto;
-}
-
-#login, #criarConta {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
-  display: flex;
-  background: #f5f5f5;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.checkbox{ 
-    display: flex;
-    line-height: 20px;
-    font-size: 16px;
-    align-items: center;
-    gap: 20px;
-}
-
-input[type="checkbox"]{
-  height:15px;
-  width: 15px !important;
-}
-
-.container {
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
-  justify-content: center;
-}
-
-button#criar {
-height: 40px;
-width: 100%;
-}
-
-button#voltar {
-  height: 40px;
-  width: 500px;
-}
-
-/* =========================================
-  FORMULARIO CONTA
-========================================== */
-
-#formularioMinhaconta .card{
-  text-align: left;
-}
-
-#formularioMinhaconta .card form{
-  display: flex;
-  flex-direction: column;
-}
-#formularioMinhaconta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-
-#formularioMinhaconta .card{
-    width: 600px;         
-    max-width: 90%;
-    background: #1d1d38;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.4);
-    text-align: left;
-}
-
-#formularioMinhaconta .card form{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-#formularioMinhaconta .card h2{
-    text-align: center;
-    color: #37a8ff;
-    margin-bottom: 30px;
-}
-
-#formularioMinhaconta .card input{
-    width: auto;
-    height: 45px;
-    border: 2px solid #b8b8b8;
-    border-radius: 8px;
-    padding: 0 15px;
-    background: #2f5d96;
-    color: white;
-    font-size: 16px;
-    background: var(--cor-fundo-claro);
-}
-
-#formularioMinhaconta .card label{
-  color: white;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-#formularioMinhaconta .card button{
-  width: 100%;
-  height: 45px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 8px;
-  background: white;
-  color: #1d1d38;
-  font-weight: bold;
-  cursor: pointer;
-  background: var(--cor-primaria);
-  color: #fff;
-}
-
-/* =========================================
-  FORMULARIO CRIAR CONTA
-========================================== */
-
-#formularioCriarconta .card{
-  text-align: left;
-}
-
-#formularioCriarconta form{
-  display: flex;
-  flex-direction: column;
-}
-#formularioCriarconta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-
-#formularioCriarconta{
-  width: 600px;         
-  max-width: 90%;
-  background: #1d1d38;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.4);
-  text-align: left;
-  MARGIN: 0 AUTO;
-}
-
-#formularioCriarconta form{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-}
-
-#formularioCriarconta h2{
-    text-align: center;
-    color: #37a8ff;
-    margin-bottom: 30px;
-}
-
-#formularioCriarconta input{
-    width: auto;
-    height: 45px;
-    border: 2px solid #b8b8b8;
-    border-radius: 8px;
-    padding: 0 15px;
-    background: #2f5d96;
-    color: white;
-    font-size: 16px;
-    background: var(--cor-fundo-claro);
-}
-
-#formularioCriarconta label{
-  color: white;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-#formularioCriarconta .button{
-  width: 150px;
-  height: 45px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 8px;
-  background: white;
-  color: #1d1d38;
-  font-weight: bold;
-  cursor: pointer;
-  background: var(--cor-primaria);
-  color: #fff;
-  text-decoration: none;
-  line-height: 45px;
-  text-align: center;
-}
-
 /* =========================================
    FOOTER
 ========================================= */
@@ -673,7 +395,8 @@ footer p {
     font-size: 20px; 
   }
   .slide img { 
-    height: 300px;
+    height: 300px; 
+  }
 }
 @media (max-width: 768px) {
   header { 
@@ -699,9 +422,7 @@ footer p {
     display: block; 
   }
   .slide img { 
-    height: 250px;
-    width: 100%;
-    display: block;
+    height: 250px; 
   }
 }
 @media (max-width: 480px) {
@@ -719,7 +440,6 @@ footer p {
     height: 180px; 
   }
 }
-}
 /* =========================================
    ESTILOS DE FORMULÁRIO ADICIONAIS
 ========================================= */
@@ -736,9 +456,6 @@ footer p {
   background-color: var(--cor-fundo-header);
   color: var(--cor-texto-claro);
   transition: border-color 0.3s;
-  border: 2px solid #b8b8b8;
-  border-radius: 8px;
-    background: var(--cor-fundo-claro);
 }
 
 input:required:invalid,
@@ -759,70 +476,4 @@ select:required:valid:not(:focus) {
 #assentosDisponiveis strong {
   color: var(--cor-primaria);
   font-weight: 700;
-}
-
-.dropbtn {
-  color: white;
-  padding: 1px;
-  font-size: 1px;
-  border: none;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.dropbtn img {
-  border-radius: 100%;
-  width: 30px;
-}
-
-.dropdown {
-  position: relative;
-  border-radius: 100%;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 9;
-  right: 0px;
-  width: 150px;
-  border-radius: 25px;    
-  top: 30px;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #a6d9f065;
-}
-
-.dropdown-content a:hover:first-child{
-  border-radius: 25px 25px 0 0;
-}
-
-.dropdown-content a:hover:last-child{
-  border-radius: 0 0 25px 25px;
-}
-
-.dropdown-content a:hover:last-child::after{
-  content: none;
-  position: unset;
-  width: 0;
-  height: 0;
-  bottom: 0;
-  left: 0;
-  background: none;
-  transition: none;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
