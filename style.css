@@ -164,6 +164,7 @@ header h1 { font-size: 24px;
    CARROSSEL
 ========================================= */
 .carrossel { 
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -180,20 +181,15 @@ header h1 { font-size: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 15px var(--cor-sombra);
 }
-.slide { 
-  display: none; 
+.slide { display: none; 
 }
 .slide img {
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    display: block;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
-    transform: scale(1.03);
+  width: 100%; 
+  height: 600px; 
+  object-fit: cover; 
+  display: block;
+  width: 100%;
+
 }
 .ativo { display: block; 
 }
