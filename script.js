@@ -197,8 +197,7 @@ if (formulario) {
     const nome = nomeInput ? nomeInput.value.trim() : "";
     const dataPartida = dataInput ? dataInput.value : "";
 
-    const destinoOption =
-      destinoSelect.options[destinoSelect.selectedIndex];
+    const destinoOption = destinoSelect.options[destinoSelect.selectedIndex];
 
     const destinoSelecionado = destinoOption.text;
     const kmString = destinoOption.getAttribute("data-km");
