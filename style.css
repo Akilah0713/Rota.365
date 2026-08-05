@@ -600,7 +600,7 @@ button#voltar {
 
 
 #formularioCriarconta{
-  width: auto;         
+  width: 600px;         
   max-width: 90%;
   background: #1d1d38;
   border-radius: 20px;
@@ -624,15 +624,15 @@ button#voltar {
 }
 
 #formularioCriarconta input{
-    width: auto;
-    height: 45px;
-    border: 2px solid #b8b8b8;
-    border-radius: 8px;
-    padding: 0 15px;
-    background: #2f5d96;
-    color: white;
-    font-size: 16px;
-    background: var(--cor-fundo-claro);
+  width: auto;
+  height: 45px;
+  border: 2px solid #b8b8b8;
+  border-radius: 8px;
+  padding: 0 15px;
+  background: #2f5d96;
+  color: white;
+  font-size: 16px;
+  background: var(--cor-fundo-claro);
 }
 
 #formularioCriarconta label{
@@ -658,6 +658,12 @@ button#voltar {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #formularioCriarconta{
+    width: auto;
+  }
+}
+
 /* =========================================
    FOOTER
 ========================================= */
@@ -671,6 +677,11 @@ footer {
 }
 footer p { 
   margin: 5px 0; 
+}
+#paginaLogin footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* =========================================
