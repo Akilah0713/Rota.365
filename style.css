@@ -668,57 +668,178 @@ footer p {
 /* =========================================
    RESPONSIVIDADE
 ========================================= */
+
 @media (max-width: 992px) {
-  header h1 { 
-    font-size: 20px; 
+
+  header h1 {
+    font-size: 20px;
   }
-  .slide img { 
+
+  .slide img {
     height: 300px;
-}
-@media (max-width: 768px) {
-  header { 
-    flex-direction: column; 
-    text-align: center; 
   }
-  .menu ul {
-    display: none; 
+
+}
+
+@media (max-width: 768px) {
+
+  header {
     flex-direction: column;
-    position: absolute; 
-    top: 60px; 
+    text-align: center;
+  }
+
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
     right: 15px;
-    width: 200px; 
+    width: 200px;
     padding: 10px;
     background: var(--cor-fundo-header);
-    border-radius: 8px; 
+    border-radius: 8px;
     box-shadow: 0 4px 15px var(--cor-sombra);
   }
+
   .menu ul.ativo {
-    display: flex; 
+    display: flex;
   }
-  .menu-toggle { 
-    display: block; 
-  }
-  .slide img { 
-    height: 250px;
-    width: 100%;
+
+  .menu-toggle {
     display: block;
   }
+
+  .slide img {
+    width: 100%;
+    height: 250px;
+    display: block;
+  }
+
+  /* LOGIN */
+
+  #login,
+  #criarConta {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .login,
+  .cadastro {
+    width: 100%;
+    height: auto;
+  }
+
+  .card.login {
+    width: 100%;
+  }
+
+  .login form {
+    width: 100%;
+  }
+
+  .login input,
+  .cadastro input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #acessar,
+  #criar,
+  #voltar {
+    width: 100%;
+  }
+
+  /* CRIAR CONTA */
+
+  #formularioCriarconta {
+    width: 95%;
+    max-width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  #formularioCriarconta form {
+    width: 100%;
+  }
+
+  #formularioCriarconta input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #formularioCriarconta .button {
+    width: 100%;
+  }
+
+  /* MINHA CONTA */
+
+  #formularioMinhaconta {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  #formularioMinhaconta .card {
+    width: 95%;
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  #formularioMinhaconta input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #formularioMinhaconta button {
+    width: 100%;
+  }
+
 }
+
 @media (max-width: 480px) {
-  #modoEscuro { 
-    bottom: 15px; 
-    left: 15px; 
-    width: 45px; 
-    height: 45px; 
-    font-size: 20px; 
+
+  header h1 {
+    font-size: 18px;
   }
-  header h1 { 
-    font-size: 18px; 
+
+  .slide img {
+    height: 180px;
   }
-  .slide img { 
-    height: 180px; 
+
+  #modoEscuro {
+    bottom: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
   }
-}
+
+  #login,
+  #criarConta,
+  #formularioCriarconta,
+  #formularioMinhaconta .card {
+    padding: 15px;
+  }
+
+  .card.login h2,
+  #formularioCriarconta h2,
+  #formularioMinhaconta h2 {
+    font-size: 22px;
+  }
+
+  .checkbox {
+    gap: 8px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
 }
 /* =========================================
    ESTILOS DE FORMULÁRIO ADICIONAIS
