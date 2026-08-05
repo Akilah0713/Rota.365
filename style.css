@@ -670,11 +670,13 @@ footer p {
 ========================================= */
 @media (max-width: 992px) {
   header h1 { 
-    font-size: 20px; 
+      font-size: 20px; 
+    }
+    .slide img { 
+      height: 300px;
   }
-  .slide img { 
-    height: 300px;
 }
+
 @media (max-width: 768px) {
   header { 
     flex-direction: row; 
@@ -703,6 +705,17 @@ footer p {
     width: 100%;
     display: block;
   }
+  #paginaLogin .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #paginaLogin .card.login, 
+  #paginaLogin .card.cadastro{
+    width: auto;
+  }
+  #paginaLogin .card.cadastro img{
+    object-fit: contain;
+  }
 }
 @media (max-width: 480px) {
   #modoEscuro { 
@@ -718,7 +731,6 @@ footer p {
   .slide img { 
     height: 180px; 
   }
-}
 }
 /* =========================================
    ESTILOS DE FORMULÁRIO ADICIONAIS
