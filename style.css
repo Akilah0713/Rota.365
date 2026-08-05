@@ -592,7 +592,7 @@ button#voltar {
 
 
 #formularioCriarconta{
-  width: 600px;         
+  width: auto;         
   max-width: 90%;
   background: #1d1d38;
   border-radius: 20px;
@@ -677,7 +677,7 @@ footer p {
 }
 @media (max-width: 768px) {
   header { 
-    flex-direction: column; 
+    flex-direction: row; 
     text-align: center; 
   }
   .menu ul {
