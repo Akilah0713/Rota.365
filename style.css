@@ -1,3460 +1,856 @@
-/* ======================================================
-   ROTA.365
-   NOVA IDENTIDADE VISUAL
-====================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/*======================================================
-CORES
-======================================================*/
-
-:root{
-
-    --cor-primaria:#0597F2;
-    --cor-secundaria:#49B1F2;
-    --cor-terciaria:#A7D5F2;
-    --cor-acento:#F2CB05;
-    --cor-detalhe:#EBA3A5;
-
-    --cor-fundo:#F7FBFF;
-    --cor-card:#FFFFFF;
-    --cor-header:#FFFFFF;
-
-    --cor-texto:#22313F;
-
-    --cor-input:#F5FCFF;
-
-    --cor-borda:#D7ECFA;
-
-    --cor-sombra:rgba(5,151,242,.15);
-
+/* =========================================
+   VARIÁVEIS E TEMA
+========================================= */
+:root {
+  --cor-primaria: #007bff;
+  --cor-secundaria: #6c757d;
+  --cor-acento: #28a745;
+  --cor-fundo-claro: #f8f9fa;
+  --cor-fundo-header: #fff;
+  --cor-texto-claro: #343a40;
+  --cor-sombra: rgba(0, 0, 0, 0.1);
 }
 
-
-/*======================================================
-MODO ESCURO
-======================================================*/
-
-.dark{
-
-    --cor-primaria:#49B1F2;
-    --cor-secundaria:#7CC8F5;
-    --cor-terciaria:#32526B;
-    --cor-acento:#F2CB05;
-    --cor-detalhe:#EBA3A5;
-
-    --cor-fundo:#0E1A27;
-    --cor-card:#182A3C;
-    --cor-header:#132232;
-
-    --cor-texto:#F4F7FA;
-
-    --cor-input:#21384E;
-
-    --cor-borda:#27435C;
-
-    --cor-sombra:rgba(0,0,0,.45);
-
+.dark {
+  --cor-fundo-claro: #17324d;
+  --cor-fundo-header: #0a0a27;
+  --cor-texto-claro: #f8f9fa;
+  --cor-primaria: #69b4ff;
+  --cor-secundaria: #adb5bd;
+  --cor-acento: #4bd86a;
+  --cor-sombra: rgba(255, 255, 255, 0.05);
 }
 
 .d-none{
-    display:none;
+  display: none
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/*======================================================
-BODY
-======================================================*/
-
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-}
-
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    background:linear-gradient(180deg,#F8FCFF,#EEF8FE);
-
-    color:var(--cor-texto);
-
-    transition:.4s;
-
-    line-height:1.6;
-
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background: var(--cor-fundo-claro);
+  color: var(--cor-texto-claro);
+  transition: background 0.5s, color 0.5s;
+  line-height: 1.6;
 }
 
 main{
-
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:25px;
-
+   max-width: 1200px; 
+   margin: 20px auto; 
+   padding: 0 15px; 
 }
 
-h1,h2,h3{
-
-    color:var(--cor-primaria);
-
-    text-align:center;
-
-    margin-bottom:20px;
-
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-top: 30px;
 }
 
-
-/*======================================================
-HEADER
-======================================================*/
-
-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:18px 40px;
-
-    background:rgba(255,255,255,.95);
-
-    backdrop-filter:blur(15px);
-
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-    position:sticky;
-
-    top:0;
-
-    z-index:999;
-
+/* =========================================
+   HEADER
+========================================= */
+header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 20px; 
+  background: var(--cor-fundo-header);
+  border-bottom: 1px solid var(--cor-sombra);
+}
+header img { width: 80px; 
+  height: auto; 
+}
+header h1 { font-size: 24px; 
+  margin: 0; 
 }
 
-.dark header{
-
-    background:rgba(19,34,50,.95);
-
+/* =========================================
+   BOTÃO MODO ESCURO
+========================================= */
+#modoEscuro {
+  position: fixed; 
+  bottom: 25px; left: 25px;
+  border: none; 
+  background: var(--cor-primaria); 
+  color: #fff;
+  border-radius: 50%; 
+  width: 55px; 
+  height: 55px;
+  font-size: 24px; 
+  cursor: pointer; 
+  z-index: 1000;
+  box-shadow: 0 6px 12px var(--cor-sombra);
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  transition: all 0.3s;
+}
+#modoEscuro:hover {
+  background: var(--cor-acento);
+  transform: scale(1.05) translateY(-2px);
 }
 
-header img{
-
-    width:85px;
-
+/* =========================================
+   MENU
+========================================= */
+.menu {
+  background: var(--cor-fundo-header);
+  position: sticky; top: 0; 
+  z-index: 999;
+  box-shadow: 0 2px 5px var(--cor-sombra);    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-
-/*======================================================
-MENU
-======================================================*/
-
-.menu{
-
-    display:flex;
-
-    align-items:center;
-
+.menu-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 10px 15px;
 }
 
-.menu ul{
-
-    display:flex;
-
-    gap:30px;
-
-    list-style:none;
-
+.menu-logo a {
+  text-decoration: none; 
+  color: var(--cor-primaria);
+  font-weight: 700; 
+  font-size: 22px;
 }
 
-.menu a{
-
-    color:var(--cor-texto);
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    position:relative;
-
-    transition:.35s;
-
+.menu ul {
+  display: flex; 
+  list-style: none; 
+  gap: 30px; margin: 0; 
+  padding: 0;
 }
 
-.menu a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:3px;
-
-    background:var(--cor-primaria);
-
-    border-radius:20px;
-
-    transition:.3s;
-
+.menu a {
+  text-decoration: none; 
+  color: var(--cor-texto-claro);
+  font-weight: 500; 
+  position: relative; 
+  transition: color 0.3s;
+}
+.menu a:hover { 
+  color: var(--cor-primaria); 
+}
+.menu a::after {
+  content: ''; 
+  position: absolute; 
+  width: 0; 
+  height: 2px; 
+  bottom: -5px; 
+  left: 0;
+  background: var(--cor-primaria); 
+  transition: width 0.3s;
+}
+.menu a:hover::after { 
+  width: 100%; 
 }
 
-.menu a:hover{
-
-    color:var(--cor-primaria);
-
+.menu-toggle {
+  display: none; 
+  font-size: 30px; 
+  cursor: pointer; 
+  color: var(--cor-texto-claro);
 }
 
-.menu a:hover::after{
-
-    width:100%;
-
+/* =========================================
+   CARROSSEL
+========================================= */
+.carrossel { 
+  margin-top: 20px; 
+  margin-top: 0;
+}
+.carrossel-container {
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--cor-sombra);
+}
+.slide { display: none; 
+}
+.slide img {
+  width: 100%; 
+  height: 700px; 
+  object-fit: cover; 
+  display: block;
+}
+.ativo { display: block; 
 }
 
-.menu-toggle{
-
-    display:none;
-
-    font-size:32px;
-
-    cursor:pointer;
-
+.anterior, .proximo {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6); 
+  color: #fff;
+  border: none; 
+  border-radius: 50%;
+  padding: 10px 18px; 
+  cursor: pointer; 
+  font-size: 18px;
+}
+.anterior:hover, .proximo:hover { 
+  background: rgba(0,0,0,0.8); 
+}
+.anterior { 
+  left: 20px; 
+} 
+.proximo { 
+  right: 20px; 
 }
 
-
-/*======================================================
-BOTÃO MODO ESCURO
-======================================================*/
-
-#modoEscuro{
-
-    position:fixed;
-
-    bottom:30px;
-
-    left:30px;
-
-    width:60px;
-
-    height:60px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:linear-gradient(135deg,#0597F2,#49B1F2);
-
-    color:white;
-
-    font-size:24px;
-
-    cursor:pointer;
-
-    box-shadow:0 15px 35px rgba(5,151,242,.35);
-
-    transition:.35s;
-
+/* =========================================
+   ANÚNCIOS
+========================================= */
+.anuncio { 
+  text-align: center; 
+  margin: 40px auto; 
+  padding: 0 15px; 
+}
+.anuncio-banner {
+  position: relative; 
+  display: block; 
+  max-width: 1000px;
+  margin: auto; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  color: inherit;
+  align-items: center;
+}
+.anuncio-banner img { 
+  width: 100%; 
+  display: block;
+  transition: opacity 0.3s; 
+}
+.anuncio-banner:hover img { 
+  opacity: 0.85;
 }
 
-#modoEscuro:hover{
-
-    transform:translateY(-5px);
-
+.anuncio-texto {
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  padding: 60px;
+  color: #fff; 
+  border-radius: 0 0 12px 12px;
+}
+.anuncio-texto h2, .anuncio-texto h3 { 
+  margin: 0 0 8px; 
+  color: #fff; 
+}
+.anuncio-texto p { 
+  margin: 0 0 12px; 
+  font-weight: 300;
 }
 
-
-/*======================================================
-CARROSSEL
-======================================================*/
-
-.carrossel{
-
-    margin-top:25px;
-
+@media (max-width: 768px) {
+  .anuncio-banner button { 
+    display: none; 
+  }
+  .anuncio-texto {
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    padding: 1px; 
+    text-align: center;
+  }
+  .anuncio.pequeno .anuncio-texto { 
+    text-align: center; 
+  }
 }
 
-.carrossel-container{
-
-    overflow:hidden;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 45px rgba(5,151,242,.20);
-
-    position:relative;
-
+/* =========================================
+   DESTINOS
+========================================= */
+.destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; margin: 30px 0;
+}
+.card {
+  background: var(--cor-fundo-header);
+  border-radius: 15px; 
+  padding: 20px; 
+  text-align: center;
+  box-shadow: 0 4px 12px var(--cor-sombra);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+}
+.card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+}
+.card img {  
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+ }
+.card h3 { 
+  margin: 10px 0 5px; 
+  font-size: 18px; 
+}
+.card p { 
+  font-size: 14px;
+  color: var(--cor-secundaria);
+  margin: 5px 0; 
+}
+.card a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--cor-primaria);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.card a:hover { 
+  background: #0056b3;
+}
+.card .preco-novo { 
+  color: var(--cor-acento); 
+  font-weight: 700; 
+}
+.card .preco-antigo { 
+  text-decoration: line-through; 
+  opacity: 0.7; 
+}
+.container {
+  display:flex;
+  align-items: stretch;
+  gap: 20px;
+}
+.login {
+  width: 500px;
+  height: 450px;
+}
+.login #acessar {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #1d1d38;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--cor-primaria);
+    color: #fff;
+}
+.cadastro {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.cadastro h2 {
+  margin: 0;
+}
+.cadastro #criar {
+  height: 40px;
+  width: 80%;
+  line-height: 40px;
 }
 
-.slide{
+/* =========================================
+    PÁGINA LOGIN
+========================================= */
 
-    display:none;
-
+#paginaLogin .card.cadastro img{
+  object-fit: contain;
 }
 
-.slide.ativo{
+/* =========================================
+   FORMULÁRIO DE RESERVA
+========================================= */
 
-    display:block;
-
+#formularioReserva, #resultado {
+  max-width: 600px; 
+  margin: 40px auto; 
+  padding: 30px;
+  background: var(--cor-fundo-header);
+  border-radius: 15px; 
+  box-shadow: 0 4px 12px var(--cor-sombra);
+  text-align:justify;
+  font-weight: bold;
 }
 
-.slide img{
-
-    width:100%;
-
-    height:650px;
-
-    object-fit:cover;
-
+#formularioReserva form {
+  display: flex;
+  flex-direction: column;
 }
 
-.anterior,
-.proximo{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.8);
-
-    cursor:pointer;
-
-    font-size:24px;
-
-    transition:.3s;
-
+#formularioReserva h3 {
+  color: #ffffff;
 }
 
-.anterior:hover,
-.proximo:hover{
-
-    background:white;
-
+#formularioReserva input, #formularioReserva select {
+  width: auto; 
+  padding: 12px; 
+  border: 1px solid #ced4da;
+  border-radius: 8px; 
+  background: var(--cor-fundo-claro);
+  color: var(--cor-texto-claro);
+}
+#formularioReserva input:focus, #formularioReserva select:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+  outline: none;
+}
+#confirmar, #novaReserva {
+  width: 100%; 
+  padding: 15px; 
+  border: none;
+  border-radius: 8px; 
+  color: #fff; 
+  font-weight: 700;
+  cursor: pointer; 
+  transition: background 0.3s;
+}
+#confirmar { 
+  background: var(--cor-acento); 
+  font-size: 18px; 
+}
+#confirmar:hover { 
+  background: #39b958; 
+}
+#novaReserva { 
+  background: var(--cor-primaria); 
+}
+#resultado h2 { 
+  color: var(--cor-acento); 
+}
+.erro { color: #dc3545; 
+  font-weight: 600; 
+  margin-top: 15px; 
+}
+.oculto { 
+  display: none !important; 
 }
 
-.anterior{
-
-    left:20px;
-
-}
-
-.proximo{
-
-    right:20px;
-
-}
-
-
-/*======================================================
-ANÚNCIOS
-======================================================*/
-
-.anuncio{
-
-    margin:50px auto;
-
-}
-
-.anuncio-banner{
-
-    display:block;
-
-    overflow:hidden;
-
-    border-radius:22px;
-
-    box-shadow:0 12px 35px rgba(5,151,242,.18);
-
-    position:relative;
-
-}
-
-.anuncio-banner img{
-
-    width:100%;
-
-    transition:.4s;
-
-}
-
-.anuncio-banner:hover img{
-
-    transform:scale(1.05);
-
-}
-
-.anuncio-texto{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    padding:50px;
-
-    color:white;
-
-    background:linear-gradient(to top,rgba(0,0,0,.55),transparent);
-
-}
-
-.anuncio-texto h2,
-.anuncio-texto h3{
-
-    color:white;
-
-}
-
-.anuncio-texto p{
-
-    color:white;
-
-}
-
-
-/*======================================================
-CARDS
-======================================================*/
-
-.destinos{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:30px;
-
-    margin-top:35px;
-
-}
-
-.card{
-
-    background:var(--cor-card);
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    box-shadow:0 12px 35px rgba(5,151,242,.12);
-
-    transition:.35s;
-
-    padding:20px;
-
-    text-align:center;
-
-}
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 45px rgba(5,151,242,.25);
-
-}
-
-.card img{
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    transition:.4s;
-
-}
-
-.card:hover img{
-
-    transform:scale(1.05);
-
-}
-
-.card h3{
-
-    margin:18px 0 10px;
-
-}
-
-.card p{
-
-    color:#666;
-
-}
-
-.card .preco-novo{
-
-    color:var(--cor-acento);
-
-    font-size:20px;
-
-    font-weight:700;
-
-}
-
-.card .preco-antigo{
-
-    text-decoration:line-through;
-
-    color:#888;
-
-}
-
-.card a{
-
-    display:block;
-
-    margin-top:18px;
-
-    padding:14px;
-
-    border-radius:12px;
-
-    background:linear-gradient(135deg,#0597F2,#49B1F2);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.card a:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 10px 25px rgba(5,151,242,.30);
-
-}
-
-
-/*======================================================
-CONTAINERS
-======================================================*/
-
-.container{
-
-    display:flex;
-
-    gap:25px;
-
-    justify-content:center;
-
-    align-items:stretch;
-
-}
-
-.login{
-
-    width:500px;
-
-}
-
-.cadastro{
-
-    width:320px;
-
-}
-
-/*======================================================
-LOGIN
-======================================================*/
-
-.card.login{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    justify-content:center;
-
-    gap:12px;
-
-    min-height:450px;
-
-}
-
-.card.login h2{
-
-    width:100%;
-
-    margin-bottom:5px;
-
+.card.login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
 }
 
 .card.login p{
-
-    width:100%;
-
-    text-align:center;
-
-    color:var(--cor-texto);
-
-    margin-bottom:10px;
-
+  margin: 5px auto;
 }
 
-.card.login form{
-
-    width:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
+.card.login form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 }
 
-.card.login input{
-
-    width:100%;
-
+.card.login h2 {
+  margin: 0 auto;
 }
 
-.login #acessar{
-
-    width:100%;
-
-    height:50px;
-
-    margin-top:15px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-weight:700;
-
-    font-size:16px;
-
-    cursor:pointer;
-
-    transition:.35s;
-
+#login, #criarConta {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
-.login #acessar:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(5,151,242,.30);
-
+.checkbox{ 
+    display: flex;
+    line-height: 20px;
+    font-size: 16px;
+    align-items: center;
+    gap: 20px;
 }
 
-
-/*======================================================
-CADASTRO - LOGIN
-======================================================*/
-
-.card.cadastro{
-
-    min-height:450px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:18px;
-
+input[type="checkbox"]{
+  height:15px;
+  width: 15px !important;
 }
 
-.card.cadastro img{
-
-    width:120px;
-
-    height:120px;
-
-    object-fit:contain;
-
+.container {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: center;
 }
 
-.card.cadastro h2{
-
-    margin:0;
-
+button#criar {
+height: 40px;
+width: 100%;
 }
 
-.card.cadastro p{
-
-    text-align:center;
-
-    color:var(--cor-texto);
-
-    font-size:14px;
-
+button#voltar {
+  height: 40px;
+  width: 500px;
 }
 
-.card.cadastro #criar{
-
-    width:85%;
-
-    padding:13px;
-
-    background:linear-gradient(
-        135deg,
-        #F2CB05,
-        #F2CB05
-    );
-
-    color:#22313F;
-
-    font-weight:700;
-
-    border-radius:12px;
-
-    text-decoration:none;
-
-    transition:.35s;
-
-}
-
-.card.cadastro #criar:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(242,203,5,.30);
-
-}
-
-
-/*======================================================
-FORMULÁRIO DE RESERVA
-======================================================*/
-
-#formularioReserva,
-#resultado{
-
-    max-width:700px;
-
-    margin:50px auto;
-
-    padding:40px;
-
-    background:var(--cor-card);
-
-    border-radius:25px;
-
-    box-shadow:
-        0 15px 45px
-        rgba(5,151,242,.14);
-
-}
-
-#formularioReserva h2{
-
-    margin-bottom:30px;
-
-}
-
-#formularioReserva form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:8px;
-
-}
-
-#formularioReserva label{
-
-    font-weight:600;
-
-    margin-top:8px;
-
-    color:var(--cor-texto);
-
-}
-
-#formularioReserva input,
-#formularioReserva select{
-
-    width:100%;
-
-    min-height:48px;
-
-    padding:12px 15px;
-
-    border:2px solid var(--cor-borda);
-
-    border-radius:12px;
-
-    background:var(--cor-input);
-
-    color:var(--cor-texto);
-
-    font-family:inherit;
-
-    font-size:15px;
-
-    outline:none;
-
-    transition:.3s;
-
-}
-
-#formularioReserva input:hover,
-#formularioReserva select:hover{
-
-    border-color:var(--cor-secundaria);
-
-}
-
-#formularioReserva input:focus,
-#formularioReserva select:focus{
-
-    border-color:var(--cor-primaria);
-
-    box-shadow:
-        0 0 0 4px
-        rgba(5,151,242,.15);
-
-}
-
-#assentosDisponiveis{
-
-    margin:15px 0;
-
-    padding:12px 15px;
-
-    border-radius:12px;
-
-    background:var(--cor-terciaria);
-
-    color:#22313F;
-
-    font-size:14px;
-
-}
-
-#assentosDisponiveis strong{
-
-    color:#0597F2;
-
-}
-
-
-/*======================================================
-SIMULAÇÃO DE PREÇO
-======================================================*/
-
-#simulacaoPreco{
-
-    margin-top:15px;
-
-    padding:15px;
-
-    border-radius:15px;
-
-    background:rgba(167,213,242,.25);
-
-}
-
-.dark #simulacaoPreco{
-
-    background:rgba(73,177,242,.10);
-
-}
-
-#simulacaoPreco p{
-
-    color:var(--cor-texto);
-
-}
-
-#simulacaoPreco strong{
-
-    color:var(--cor-primaria);
-
-}
-
-
-/*======================================================
-BOTÃO CONFIRMAR RESERVA
-======================================================*/
-
-#confirmar{
-
-    width:100%;
-
-    min-height:52px;
-
-    margin-top:20px;
-
-    border:none;
-
-    border-radius:13px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-family:inherit;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-#confirmar:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(5,151,242,.30);
-
-}
-
-
-/*======================================================
-RESULTADO DA RESERVA
-======================================================*/
-
-#resultado{
-
-    text-align:center;
-
-}
-
-#resultado h2{
-
-    color:var(--cor-primaria);
-
-}
-
-#resultado h3{
-
-    color:var(--cor-acento);
-
-}
-
-#resultado p{
-
-    margin:10px 0;
-
-}
-
-#resultado strong{
-
-    color:var(--cor-primaria);
-
-}
-
-#novaReserva{
-
-    width:100%;
-
-    min-height:50px;
-
-    margin-top:20px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-#novaReserva:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(5,151,242,.30);
-
-}
-
-
-/*======================================================
-FORMULÁRIO CRIAR CONTA
-======================================================*/
-
-#formularioCriarconta{
-
-    width:650px;
-
-    max-width:95%;
-
-    margin:50px auto;
-
-    padding:45px;
-
-    background:var(--cor-card);
-
-    border-radius:25px;
-
-    box-shadow:
-        0 15px 45px
-        rgba(5,151,242,.15);
-
-}
-
-#formularioCriarconta h2{
-
-    font-size:28px;
-
-    margin-bottom:8px;
-
-}
-
-#formularioCriarconta h3{
-
-    color:var(--cor-texto);
-
-    font-size:15px;
-
-    font-weight:400;
-
-    margin-bottom:30px;
-
-}
-
-#formularioCriarconta form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:7px;
-
-}
-
-#formularioCriarconta label{
-
-    color:var(--cor-texto);
-
-    font-weight:600;
-
-    margin-top:8px;
-
-}
-
-#formularioCriarconta input{
-
-    width:100%;
-
-    height:48px;
-
-    padding:10px 15px;
-
-    border:2px solid var(--cor-borda);
-
-    border-radius:12px;
-
-    background:var(--cor-input);
-
-    color:var(--cor-texto);
-
-    font-family:inherit;
-
-    font-size:15px;
-
-    outline:none;
-
-    transition:.3s;
-
-}
-
-#formularioCriarconta input:focus{
-
-    border-color:var(--cor-primaria);
-
-    box-shadow:
-        0 0 0 4px
-        rgba(5,151,242,.15);
-
-}
-
-
-/*======================================================
-CHECKBOX
-======================================================*/
-
-.checkbox{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
-
-    margin-top:20px;
-
-    padding:15px;
-
-    background:rgba(167,213,242,.25);
-
-    border-radius:12px;
-
-}
-
-.checkbox input[type="checkbox"]{
-
-    width:18px !important;
-
-    height:18px;
-
-    margin-top:3px;
-
-    accent-color:var(--cor-primaria);
-
-    cursor:pointer;
-
-}
-
-.checkbox p{
-
-    margin:0;
-
-    font-size:13px;
-
-    color:var(--cor-texto);
-
-}
-
-
-/*======================================================
-BOTÕES CRIAR CONTA
-======================================================*/
-
-#formularioCriarconta .container{
-
-    margin-top:10px;
-
-    display:flex;
-
-    gap:15px;
-
-    justify-content:center;
-
-}
-
-#formularioCriarconta .button{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 20px;
-
-    border-radius:12px;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-#formularioCriarconta #criar{
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-}
-
-#formularioCriarconta #voltar{
-
-    background:var(--cor-terciaria);
-
-    color:#22313F;
-
-}
-
-#formularioCriarconta .button:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(5,151,242,.20);
-
-}
-
-
-/*======================================================
-MINHA CONTA
-======================================================*/
-
-#formularioMinhaconta{
-
-    min-height:calc(100vh - 150px);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:40px 20px;
-
-}
+/* =========================================
+  FORMULARIO CONTA
+========================================== */
 
 #formularioMinhaconta .card{
-
-    width:650px;
-
-    max-width:95%;
-
-    padding:45px;
-
-    background:var(--cor-card);
-
-    border-radius:25px;
-
-    box-shadow:
-        0 15px 45px
-        rgba(5,151,242,.15);
-
-    text-align:left;
-
-}
-
-#formularioMinhaconta .card h2{
-
-    margin-bottom:30px;
-
+  text-align: left;
 }
 
 #formularioMinhaconta .card form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:8px;
-
+  display: flex;
+  flex-direction: column;
+}
+#formularioMinhaconta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-#formularioMinhaconta .card label{
 
-    color:var(--cor-texto);
+#formularioMinhaconta .card{
+    width: 600px;         
+    max-width: 90%;
+    background: #1d1d38;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+    text-align: left;
+}
 
-    font-weight:600;
+#formularioMinhaconta .card form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
-    margin-top:8px;
-
+#formularioMinhaconta .card h2{
+    text-align: center;
+    color: #37a8ff;
+    margin-bottom: 30px;
 }
 
 #formularioMinhaconta .card input{
-
-    width:100%;
-
-    height:48px;
-
-    padding:10px 15px;
-
-    border:2px solid var(--cor-borda);
-
-    border-radius:12px;
-
-    background:var(--cor-input);
-
-    color:var(--cor-texto);
-
-    font-family:inherit;
-
-    font-size:15px;
-
-    outline:none;
-
-    transition:.3s;
-
+    width: auto;
+    height: 45px;
+    border: 2px solid #b8b8b8;
+    border-radius: 8px;
+    padding: 0 15px;
+    background: #2f5d96;
+    color: white;
+    font-size: 16px;
+    background: var(--cor-fundo-claro);
 }
 
-#formularioMinhaconta .card input:focus{
-
-    border-color:var(--cor-primaria);
-
-    box-shadow:
-        0 0 0 4px
-        rgba(5,151,242,.15);
-
+#formularioMinhaconta .card label{
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 #formularioMinhaconta .card button{
-
-    width:100%;
-
-    height:50px;
-
-    margin-top:20px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-family:inherit;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.35s;
-
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #1d1d38;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--cor-primaria);
+  color: #fff;
 }
 
-#formularioMinhaconta .card button:hover{
+/* =========================================
+  FORMULARIO CRIAR CONTA
+========================================== */
 
-    transform:translateY(-3px);
+#formularioCriarconta .card{
+  text-align: left;
+}
 
-    box-shadow:
-        0 10px 25px
-        rgba(5,151,242,.30);
-
+#formularioCriarconta form{
+  display: flex;
+  flex-direction: column;
+}
+#formularioCriarconta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 
-/*======================================================
-MENSAGENS DE ERRO
-======================================================*/
+#formularioCriarconta{
+  width: 600px;         
+  max-width: 90%;
+  background: #1d1d38;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.4);
+  text-align: left;
+  MARGIN: 0 AUTO;
+}
 
-.erro{
+#formularioCriarconta form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
 
-    color:#D95C63;
+#formularioCriarconta h2{
+    text-align: center;
+    color: #37a8ff;
+    margin-bottom: 30px;
+}
 
-    font-weight:600;
+#formularioCriarconta input{
+  width: auto;
+  height: 45px;
+  border: 2px solid #b8b8b8;
+  border-radius: 8px;
+  padding: 0 15px;
+  background: #2f5d96;
+  color: white;
+  font-size: 16px;
+  background: var(--cor-fundo-claro);
+}
 
-    margin-top:15px;
+#formularioCriarconta label{
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
+#formularioCriarconta .button{
+  width: 150px;
+  height: 45px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #1d1d38;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  line-height: 45px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #formularioCriarconta{
+    width: auto;
+  }
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+  background: var(--cor-fundo-header);
+  color: var(--cor-secundaria);
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid var(--cor-sombra);
+  font-size: 14px;
+}
+footer p { 
+  margin: 5px 0; 
+}
+#paginaLogin footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+@media (max-width: 992px) {
+  header h1 { 
+      font-size: 20px; 
+    }
+    .slide img { 
+      height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  header { 
+    flex-direction: row; 
+    text-align: center; 
+  }
+  .menu ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute; 
+    top: 60px; 
+    right: 15px;
+    width: 200px; 
+    padding: 10px;
+    background: var(--cor-fundo-header);
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px var(--cor-sombra);
+  }
+  .menu ul.ativo {
+    display: flex; 
+  }
+  .menu-toggle { 
+    display: block; 
+  }
+  .slide img { 
+    height: 250px;
+    width: 100%;
+    display: block;
+  }
+  #paginaLogin .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #paginaLogin .card.login, 
+  #paginaLogin .card.cadastro{
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  #modoEscuro { 
+    bottom: 15px; 
+    left: 15px; 
+    width: 45px; 
+    height: 45px; 
+    font-size: 20px; 
+  }
+  header h1 { 
+    font-size: 18px; 
+  }
+  .slide img { 
+    height: 180px; 
+  }
+}
+/* =========================================
+   ESTILOS DE FORMULÁRIO ADICIONAIS
+========================================= */
+#dataPartida,
+#nome,
+#passageiros,
+#destino,
+#assento {
+  padding: 10px;
+  border: 1px solid var(--cor-sombra);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--cor-fundo-header);
+  color: var(--cor-texto-claro);
+  transition: border-color 0.3s;
+  border: 2px solid #b8b8b8;
+  border-radius: 8px;
+    background: var(--cor-fundo-claro);
 }
 
 input:required:invalid,
-select:required:invalid{
-
-    border-color:#EBA3A5;
-
+select:required:invalid {
+  border-color: #dc3545;
 }
 
 input:required:valid:not(:focus),
-select:required:valid:not(:focus){
-
-    border-color:#49B1F2;
-
-}
-
-
-/*======================================================
-ELEMENTOS OCULTOS
-======================================================*/
-
-.oculto{
-
-    display:none !important;
-
-}
-
-
-/*======================================================
-DROPDOWN DO USUÁRIO
-======================================================*/
-
-.dropdown{
-
-    position:relative;
-
-}
-
-.dropbtn{
-
-    border:none;
-
-    padding:5px;
-
-    background:transparent;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-}
-
-.dropbtn img{
-
-    width:38px;
-
-    height:38px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    transition:.3s;
-
-}
-
-.dropbtn:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.dropdown-content{
-
-    display:none;
-
-    position:absolute;
-
-    right:0;
-
-    top:48px;
-
-    width:180px;
-
-    background:var(--cor-card);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,.15);
-
-    z-index:1000;
-
-}
-
-.dropdown-content a{
-
-    display:block;
-
-    padding:13px 18px;
-
-    color:var(--cor-texto);
-
-    text-decoration:none;
-
-    font-weight:500;
-
-}
-
-.dropdown-content a:hover{
-
-    background:var(--cor-terciaria);
-
-    color:#22313F;
-
-}
-
-.dropdown:hover .dropdown-content{
-
-    display:block;
-
-}
-
-/*======================================================
-FOOTER
-======================================================*/
-
-footer{
-
-    margin-top:70px;
-
-    padding:45px 30px 25px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    text-align:center;
-
-    border-radius:35px 35px 0 0;
-
-    box-shadow:
-        0 -10px 35px
-        rgba(5,151,242,.15);
-
-}
-
-footer h2,
-footer h3{
-
-    color:white;
-
-    margin-bottom:12px;
-
-}
-
-footer p{
-
-    color:white;
-
-    opacity:.95;
-
-}
-
-footer a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-footer a:hover{
-
-    color:#F2CB05;
-
-}
-
-.footer-container{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:40px;
-
-    text-align:left;
-
-}
-
-.footer-col{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:8px;
-
-}
-
-.footer-col h3{
-
-    text-align:left;
-
-    font-size:18px;
-
-}
-
-.footer-bottom{
-
-    max-width:1200px;
-
-    margin:35px auto 0;
-
-    padding-top:20px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.30);
-
-    font-size:13px;
-
-}
-
-
-/*======================================================
-ÍCONES / REDES SOCIAIS
-======================================================*/
-
-.redes-sociais{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-top:20px;
-
-}
-
-.redes-sociais a{
-
-    width:42px;
-
-    height:42px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.18);
-
-    transition:.35s;
-
-}
-
-.redes-sociais a:hover{
-
-    background:#F2CB05;
-
-    color:#22313F;
-
-    transform:
-        translateY(-4px);
-
-}
-
-
-/*======================================================
-SEÇÃO DE DESTINOS
-======================================================*/
-
-.secao-destinos{
-
-    padding:50px 0;
-
-}
-
-.secao-destinos h2{
-
-    font-size:32px;
-
-    margin-bottom:10px;
-
-}
-
-.secao-destinos > p{
-
-    text-align:center;
-
-    max-width:650px;
-
-    margin:0 auto 35px;
-
-    color:#667788;
-
-}
-
-.dark .secao-destinos > p{
-
-    color:#B8C8D5;
-
-}
-
-
-/*======================================================
-TÍTULOS DE SEÇÃO
-======================================================*/
-
-.titulo-secao{
-
-    position:relative;
-
-    text-align:center;
-
-    margin:50px 0 30px;
-
-}
-
-.titulo-secao::after{
-
-    content:"";
-
-    display:block;
-
-    width:65px;
-
-    height:4px;
-
-    margin:10px auto 0;
-
-    border-radius:10px;
-
-    background:linear-gradient(
-        90deg,
-        #0597F2,
-        #F2CB05
-    );
-
-}
-
-
-/*======================================================
-BARRA DE PESQUISA
-======================================================*/
-
-.pesquisa{
-
-    max-width:850px;
-
-    margin:35px auto;
-
-    padding:10px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    background:var(--cor-card);
-
-    border-radius:18px;
-
-    box-shadow:
-        0 12px 35px
-        rgba(5,151,242,.13);
-
-}
-
-.pesquisa input{
-
-    flex:1;
-
-    height:48px;
-
-    border:none;
-
-    outline:none;
-
-    padding:0 15px;
-
-    background:transparent;
-
-    color:var(--cor-texto);
-
-    font-family:inherit;
-
-}
-
-.pesquisa button{
-
-    min-width:130px;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-family:inherit;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.pesquisa button:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 8px 20px
-        rgba(5,151,242,.25);
-
-}
-
-
-/*======================================================
-BADGES / ETIQUETAS
-======================================================*/
-
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:6px 12px;
-
-    border-radius:30px;
-
-    font-size:12px;
-
-    font-weight:700;
-
-}
-
-.badge-promocao{
-
-    background:#F2CB05;
-
-    color:#22313F;
-
-}
-
-.badge-novo{
-
-    background:#0597F2;
-
-    color:white;
-
-}
-
-.badge-destaque{
-
-    background:#EBA3A5;
-
-    color:#22313F;
-
-}
-
-
-/*======================================================
-PREÇOS
-======================================================*/
-
-.preco{
-
-    margin:15px 0;
-
-}
-
-.preco-antigo{
-
-    display:block;
-
-    color:#8A969F;
-
-    font-size:14px;
-
-    text-decoration:line-through;
-
-}
-
-.preco-novo{
-
-    color:#F2CB05;
-
-    font-size:23px;
-
-    font-weight:700;
-
-}
-
-
-/*======================================================
-BOTÕES GERAIS
-======================================================*/
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 25px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        135deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    color:white;
-
-    font-family:inherit;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(5,151,242,.28);
-
-}
-
-.btn-amarelo{
-
-    background:#F2CB05;
-
-    color:#22313F;
-
-}
-
-.btn-amarelo:hover{
-
-    box-shadow:
-        0 10px 25px
-        rgba(242,203,5,.30);
-
-}
-
-.btn-rosa{
-
-    background:#EBA3A5;
-
-    color:#22313F;
-
-}
-
-
-/*======================================================
-MENSAGENS / ALERTAS
-======================================================*/
-
-.alerta{
-
-    padding:15px 18px;
-
-    border-radius:14px;
-
-    margin:15px 0;
-
-    font-size:14px;
-
-}
-
-.alerta-info{
-
-    background:#A7D5F2;
-
-    color:#22313F;
-
-}
-
-.alerta-sucesso{
-
-    background:#DFF4FF;
-
-    border-left:4px solid #0597F2;
-
-    color:#22313F;
-
-}
-
-.alerta-aviso{
-
-    background:#FFF6CC;
-
-    border-left:4px solid #F2CB05;
-
-    color:#5E5000;
-
-}
-
-.alerta-erro{
-
-    background:#FCE5E7;
-
-    border-left:4px solid #EBA3A5;
-
-    color:#7A3338;
-
-}
-
-
-/*======================================================
-TABELAS
-======================================================*/
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    background:var(--cor-card);
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(5,151,242,.10);
-
-}
-
-th{
-
-    padding:15px;
-
-    background:#0597F2;
-
-    color:white;
-
-    text-align:left;
-
-}
-
-td{
-
-    padding:14px 15px;
-
-    border-bottom:
-        1px solid
-        var(--cor-borda);
-
-}
-
-tr:last-child td{
-
-    border-bottom:none;
-
-}
-
-tr:hover td{
-
-    background:rgba(167,213,242,.18);
-
-}
-
-
-/*======================================================
-TABLET
-======================================================*/
-
-@media (max-width:992px){
-
-    header{
-
-        padding:15px 25px;
-
-    }
-
-    .menu ul{
-
-        gap:18px;
-
-    }
-
-    .slide img{
-
-        height:450px;
-
-    }
-
-    .destinos{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-    .footer-container{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-}
-
-
-/*======================================================
-CELULAR — 768PX
-======================================================*/
-
-@media (max-width:768px){
-
-    body{
-
-        overflow-x:hidden;
-
-    }
-
-    main{
-
-        padding:18px;
-
-    }
-
-
-    /* HEADER */
-
-    header{
-
-        flex-direction:column;
-
-        gap:15px;
-
-        padding:15px 20px;
-
-        position:relative;
-
-    }
-
-    header img{
-
-        width:75px;
-
-    }
-
-
-    /* MENU */
-
-    .menu{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .menu ul{
-
-        width:100%;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:10px;
-
-    }
-
-    .menu a{
-
-        display:block;
-
-        padding:7px;
-
-    }
-
-
-    /* CARROSSEL */
-
-    .slide img{
-
-        height:330px;
-
-    }
-
-    .anterior,
-    .proximo{
-
-        width:42px;
-
-        height:42px;
-
-        font-size:18px;
-
-    }
-
-    .anterior{
-
-        left:10px;
-
-    }
-
-    .proximo{
-
-        right:10px;
-
-    }
-
-
-    /* ANÚNCIO */
-
-    .anuncio-texto{
-
-        padding:25px;
-
-    }
-
-    .anuncio-texto h2{
-
-        font-size:22px;
-
-    }
-
-
-    /* DESTINOS */
-
-    .destinos{
-
-        grid-template-columns:1fr;
-
-        gap:22px;
-
-    }
-
-
-    /* CONTAINER */
-
-    .container{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .login,
-    .cadastro{
-
-        width:100%;
-
-    }
-
-
-    /* FORMULÁRIOS */
-
-    #formularioReserva,
-    #resultado,
-    #formularioCriarconta{
-
-        width:100%;
-
-        max-width:100%;
-
-        margin:30px auto;
-
-        padding:25px 20px;
-
-        border-radius:20px;
-
-    }
-
-    #formularioMinhaconta{
-
-        padding:20px 0;
-
-    }
-
-    #formularioMinhaconta .card{
-
-        width:100%;
-
-        max-width:100%;
-
-        padding:25px 20px;
-
-    }
-
-
-    /* PESQUISA */
-
-    .pesquisa{
-
-        flex-direction:column;
-
-        padding:12px;
-
-    }
-
-    .pesquisa input{
-
-        width:100%;
-
-    }
-
-    .pesquisa button{
-
-        width:100%;
-
-    }
-
-
-    /* FOOTER */
-
-    footer{
-
-        margin-top:40px;
-
-        border-radius:25px 25px 0 0;
-
-        padding:35px 20px 20px;
-
-    }
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-        gap:25px;
-
-    }
-
-    .footer-col{
-
-        align-items:center;
-
-    }
-
-    .footer-col h3{
-
-        text-align:center;
-
-    }
-
-}
-
-
-/*======================================================
-CELULAR PEQUENO — 480PX
-======================================================*/
-
-@media (max-width:480px){
-
-    h1{
-
-        font-size:25px;
-
-    }
-
-    h2{
-
-        font-size:22px;
-
-    }
-
-    h3{
-
-        font-size:18px;
-
-    }
-
-    .slide img{
-
-        height:250px;
-
-    }
-
-    .card{
-
-        padding:15px;
-
-        border-radius:18px;
-
-    }
-
-    .card img{
-
-        height:190px;
-
-    }
-
-    #modoEscuro{
-
-        width:50px;
-
-        height:50px;
-
-        bottom:20px;
-
-        left:20px;
-
-        font-size:20px;
-
-    }
-
-    #formularioCriarconta .container{
-
-        flex-direction:column;
-
-    }
-
-    #formularioCriarconta .button{
-
-        width:100%;
-
-    }
-
-    .anuncio-texto{
-
-        padding:18px;
-
-    }
-
-    .anuncio-texto h2{
-
-        font-size:18px;
-
-    }
-
-    .anuncio-texto p{
-
-        font-size:12px;
-
-    }
-
-}
-
-
-/*======================================================
-TELAS MUITO PEQUENAS
-======================================================*/
-
-@media (max-width:360px){
-
-    main{
-
-        padding:12px;
-
-    }
-
-    .slide img{
-
-        height:210px;
-
-    }
-
-    .card img{
-
-        height:170px;
-
-    }
-
-    #formularioReserva,
-    #resultado,
-    #formularioCriarconta{
-
-        padding:20px 15px;
-
-    }
-
-    #formularioMinhaconta .card{
-
-        padding:20px 15px;
-
-    }
-
-}
-
-/*======================================================
-   ROTA.365 — AJUSTES FINAIS DA NOVA IDENTIDADE
-======================================================*/
-
-
-/*======================================================
-CORES GERAIS DE TEXTOS
-======================================================*/
-
-p,
-span,
-label,
-li{
-
-    color:var(--cor-texto);
-
-}
-
-.dark p,
-.dark span,
-.dark label,
-.dark li{
-
-    color:var(--cor-texto);
-
-}
-
-
-/*======================================================
-LINKS
-======================================================*/
-
-a{
-
-    transition:.3s ease;
-
-}
-
-a:not(.btn):hover{
-
-    color:var(--cor-primaria);
-
-}
-
-
-/*======================================================
-SELEÇÃO DE TEXTO
-======================================================*/
-
-::selection{
-
-    background:#0597F2;
-
-    color:white;
-
-}
-
-
-/*======================================================
-SCROLLBAR
-======================================================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#EAF7FF;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:linear-gradient(
-        180deg,
-        #0597F2,
-        #49B1F2
-    );
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#0597F2;
-
-}
-
-.dark ::-webkit-scrollbar-track{
-
-    background:#0E1A27;
-
-}
-
-
-/*======================================================
-FOCO
-======================================================*/
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible{
-
-    outline:3px solid
-        rgba(5,151,242,.35);
-
-    outline-offset:3px;
-
-}
-
-
-/*======================================================
-BOTÕES DESABILITADOS
-======================================================*/
-
-button:disabled,
-.btn:disabled{
-
-    opacity:.55;
-
-    cursor:not-allowed;
-
-    transform:none !important;
-
-    box-shadow:none !important;
-
-}
-
-
-/*======================================================
-IMAGENS
-======================================================*/
-
-img{
-
-    max-width:100%;
-
-}
-
-
-/*======================================================
-BOTÃO VOLTAR
-======================================================*/
-
-#voltar{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 22px;
-
-    border-radius:12px;
-
-    background:#A7D5F2;
-
-    color:#22313F;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-#voltar:hover{
-
-    background:#49B1F2;
-
-    color:white;
-
-    transform:translateY(-3px);
-
-}
-
-
-/*======================================================
-LINKS DE LOGIN / CADASTRO
-======================================================*/
-
-.link-cadastro,
-.link-login{
-
-    color:#0597F2;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-}
-
-.link-cadastro:hover,
-.link-login:hover{
-
-    color:#49B1F2;
-
-    text-decoration:underline;
-
-}
-
-
-/*======================================================
-SEÇÃO DE BOAS-VINDAS
-======================================================*/
-
-.boas-vindas{
-
-    max-width:850px;
-
-    margin:40px auto;
-
-    padding:45px 30px;
-
-    text-align:center;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            rgba(5,151,242,.95),
-            rgba(73,177,242,.90)
-        );
-
-    border-radius:28px;
-
-    color:white;
-
-    box-shadow:
-        0 18px 45px
-        rgba(5,151,242,.22);
-
-}
-
-.boas-vindas h1,
-.boas-vindas h2{
-
-    color:white;
-
-}
-
-.boas-vindas p{
-
-    color:white;
-
-    max-width:650px;
-
-    margin:auto;
-
-}
-
-
-/*======================================================
-DESTAQUE
-======================================================*/
-
-.destaque{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.destaque::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-
-    height:180px;
-
-    border-radius:50%;
-
-    background:#A7D5F2;
-
-    opacity:.35;
-
-    top:-80px;
-
-    right:-70px;
-
-}
-
-.destaque::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:120px;
-
-    height:120px;
-
-    border-radius:50%;
-
-    background:#EBA3A5;
-
-    opacity:.25;
-
-    bottom:-60px;
-
-    left:-40px;
-
-}
-
-
-/*======================================================
-CARDS DE RESERVA
-======================================================*/
-
-.reserva-card{
-
-    background:var(--cor-card);
-
-    border:1px solid var(--cor-borda);
-
-    border-radius:20px;
-
-    padding:25px;
-
-    box-shadow:
-        0 10px 30px
-        rgba(5,151,242,.10);
-
-    transition:.35s;
-
-}
-
-.reserva-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-        0 18px 40px
-        rgba(5,151,242,.18);
-
-}
-
-
-/*======================================================
-ÍCONES
-======================================================*/
-
-.icone{
-
-    width:50px;
-
-    height:50px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:15px;
-
-    background:#A7D5F2;
-
-    color:#0597F2;
-
-    font-size:22px;
-
-    margin-bottom:15px;
-
-}
-
-
-/*======================================================
-SEÇÃO DE BENEFÍCIOS
-======================================================*/
-
-.beneficios{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:25px;
-
-    margin:45px 0;
-
-}
-
-.beneficio{
-
-    padding:30px;
-
-    text-align:center;
-
-    background:var(--cor-card);
-
-    border-radius:20px;
-
-    border:1px solid var(--cor-borda);
-
-    box-shadow:
-        0 8px 25px
-        rgba(5,151,242,.08);
-
-    transition:.35s;
-
-}
-
-.beneficio:hover{
-
-    transform:translateY(-6px);
-
-    border-color:#49B1F2;
-
-}
-
-.beneficio h3{
-
-    font-size:18px;
-
-    margin-bottom:8px;
-
-}
-
-.beneficio p{
-
-    font-size:14px;
-
-}
-
-
-/*======================================================
-SEÇÃO DE PROMOÇÃO
-======================================================*/
-
-.promocao{
-
-    position:relative;
-
-    padding:35px;
-
-    margin:40px auto;
-
-    max-width:1000px;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #FFF8D6,
-            #FFFDF0
-        );
-
-    border:2px solid #F2CB05;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    overflow:hidden;
-
-}
-
-.promocao h2{
-
-    color:#C5A400;
-
-}
-
-.promocao p{
-
-    color:#5E5000;
-
-}
-
-.promocao .preco-novo{
-
-    color:#C5A400;
-
-}
-
-
-/*======================================================
-MODO ESCURO — PROMOÇÃO
-======================================================*/
-
-.dark .promocao{
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #3D3610,
-            #2A2818
-        );
-
-}
-
-.dark .promocao h2{
-
-    color:#F2CB05;
-
-}
-
-.dark .promocao p{
-
-    color:#FFF3A3;
-
-}
-
-
-/*======================================================
-LOADING
-======================================================*/
-
-.loading{
-
-    width:45px;
-
-    height:45px;
-
-    margin:30px auto;
-
-    border:4px solid
-        #A7D5F2;
-
-    border-top-color:
-        #0597F2;
-
-    border-radius:50%;
-
-    animation:
-        girar .8s linear infinite;
-
-}
-
-@keyframes girar{
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
-}
-
-
-/*======================================================
-ANIMAÇÕES
-======================================================*/
-
-.animar{
-
-    animation:
-        aparecer .6s ease both;
-
-}
-
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-/*======================================================
-EFEITO SUAVE NOS CARDS
-======================================================*/
-
-.card,
-.reserva-card,
-.beneficio,
-#formularioReserva,
-#resultado,
-#formularioCriarconta,
-#formularioMinhaconta .card{
-
-    animation:
-        aparecer .5s ease both;
-
-}
-
-
-/*======================================================
-FORMULÁRIOS — AJUSTE FINAL
-======================================================*/
-
-form button{
-
-    font-family:inherit;
-
-}
-
-form input::placeholder,
-form select::placeholder{
-
-    color:#8495A3;
-
-    opacity:.8;
-
-}
-
-.dark form input::placeholder{
-
-    color:#AABBC8;
-
+select:required:valid:not(:focus) {
+  border-color: var(--cor-acento); 
 }
 
-
-/*======================================================
-SELECT
-======================================================*/
-
-select{
-
-    cursor:pointer;
-
-}
-
-select option{
-
-    background:white;
-
-    color:#22313F;
-
-}
-
-.dark select option{
-
-    background:#20364D;
-
-    color:white;
-
-}
-
-
-/*======================================================
-CHECKBOX E RADIO
-======================================================*/
-
-input[type="checkbox"],
-input[type="radio"]{
-
-    accent-color:#0597F2;
-
-}
-
-
-/*======================================================
-DATA
-======================================================*/
-
-input[type="date"]{
-
-    cursor:pointer;
-
-}
-
-
-/*======================================================
-BOTÃO PRINCIPAL
-======================================================*/
-
-button{
-
-    font-family:inherit;
-
-}
-
-button:not(.anterior):not(.proximo){
-
-    transition:.35s;
-
-}
-
-
-/*======================================================
-MODO ESCURO — CARDS
-======================================================*/
-
-.dark .card,
-.dark .reserva-card,
-.dark .beneficio{
-
-    border-color:#27435C;
-
-}
-
-.dark .card p,
-.dark .reserva-card p,
-.dark .beneficio p{
-
-    color:#D0DCE5;
-
-}
-
-
-/*======================================================
-MODO ESCURO — TABELA
-======================================================*/
-
-.dark table{
-
-    background:#182A3C;
-
-}
-
-.dark td{
-
-    color:#F4F7FA;
-
-}
-
-.dark tr:hover td{
-
-    background:#20384D;
-
-}
-
-
-/*======================================================
-MODO ESCURO — DROPDOWN
-======================================================*/
-
-.dark .dropdown-content{
-
-    background:#182A3C;
-
-}
-
-.dark .dropdown-content a{
-
-    color:#F4F7FA;
-
-}
-
-.dark .dropdown-content a:hover{
-
-    background:#27435C;
-
-    color:white;
-
+#assentosDisponiveis {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--cor-secundaria);
 }
-
-
-/*======================================================
-MODO ESCURO — INPUTS
-======================================================*/
-
-.dark input,
-.dark select{
-
-    background:#21384E;
-
-    color:#F4F7FA;
-
-    border-color:#31546E;
-
+#assentosDisponiveis strong {
+  color: var(--cor-primaria);
+  font-weight: 700;
 }
-
-.dark input:focus,
-.dark select:focus{
-
-    border-color:#49B1F2;
 
+.dropbtn {
+  color: white;
+  padding: 1px;
+  font-size: 1px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
 }
-
-
-/*======================================================
-MODO ESCURO — BOTÃO VOLTAR
-======================================================*/
-
-.dark #voltar{
-
-    background:#32526B;
 
-    color:white;
-
+.dropbtn img {
+  border-radius: 100%;
+  width: 30px;
 }
-
-.dark #voltar:hover{
 
-    background:#49B1F2;
-
+.dropdown {
+  position: relative;
+  border-radius: 100%;
 }
-
 
-/*======================================================
-MODO ESCURO — CHECKBOX
-======================================================*/
-
-.dark .checkbox{
-
-    background:rgba(73,177,242,.10);
-
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9;
+  right: 0px;
+  width: 150px;
+  border-radius: 25px;    
+  top: 30px;
 }
-
 
-/*======================================================
-MODO ESCURO — ASSENTOS
-======================================================*/
-
-.dark #assentosDisponiveis{
-
-    background:#27435C;
-
-    color:white;
-
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.dark #assentosDisponiveis strong{
-
-    color:#49B1F2;
-
+.dropdown-content a:hover {
+  background-color: #a6d9f065;
 }
-
-
-/*======================================================
-RESPONSIVIDADE BENEFÍCIOS
-======================================================*/
-
-@media (max-width:768px){
-
-    .beneficios{
-
-        grid-template-columns:1fr;
-
-        gap:18px;
-
-    }
-
-    .boas-vindas{
-
-        padding:30px 20px;
-
-        border-radius:22px;
 
-    }
-
-    .promocao{
-
-        padding:25px 18px;
-
-    }
-
+.dropdown-content a:hover:first-child{
+  border-radius: 25px 25px 0 0;
 }
-
-
-/*======================================================
-ANIMAÇÕES — REDUÇÃO DE MOVIMENTO
-======================================================*/
-
-@media (prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
 
-        animation-duration:.01ms !important;
-
-        animation-iteration-count:1 !important;
-
-        transition-duration:.01ms !important;
-
-        scroll-behavior:auto !important;
-
-    }
-
+.dropdown-content a:hover:last-child{
+  border-radius: 0 0 25px 25px;
 }
-
-
-/*======================================================
-AJUSTE FINAL DO BODY
-======================================================*/
-
-html{
-
-    scroll-behavior:smooth;
 
+.dropdown-content a:hover:last-child::after{
+  content: none;
+  position: unset;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background: none;
+  transition: none;
 }
 
-body{
-    min-height:100vh;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
-/*======================================================
-FIM DO NOVO STYLE.CSS
-======================================================*/
