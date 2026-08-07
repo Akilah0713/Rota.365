@@ -634,7 +634,7 @@ button#voltar {
     font-size: 16px;
     background: var(--cor-fundo-claro);
 }
-#formularioCriarconta dark {
+#formularioCriarconta .dark {
     --cor-fundo-claro: #17324d;
     --cor-fundo-header: #001027;
     --cor-texto-claro: #f8f9fa;
