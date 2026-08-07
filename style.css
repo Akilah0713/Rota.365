@@ -602,7 +602,7 @@ button#voltar {
 #formularioCriarconta{
   width: 600px;         
   max-width: 90%;
-  background: #1d1d38;
+  background: rgb(255, 255, 255);
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 8px 20px rgba(0,0,0,.4);
@@ -623,20 +623,28 @@ button#voltar {
     margin-bottom: 30px;
 }
 
-#formularioCriarconta input{
-  width: auto;
-  height: 45px;
-  border: 2px solid #b8b8b8;
-  border-radius: 8px;
-  padding: 0 15px;
-  background: #2f5d96;
-  color: white;
-  font-size: 16px;
-  background: var(--cor-fundo-claro);
+#formularioCriarconta input {
+    width: auto;
+    height: 45px;
+    border: 2px solid #b8b8b8;
+    border-radius: 8px;
+    padding: 0 15px;
+    background: #2f5d96;
+    color: #000000;
+    font-size: 16px;
+    background: var(--cor-fundo-claro);
 }
-
+#formularioCriarconta dark {
+    --cor-fundo-claro: #17324d;
+    --cor-fundo-header: #001027;
+    --cor-texto-claro: #f8f9fa;
+    --cor-primaria: #69b4ff;
+    --cor-secundaria: #adb5bd;
+    --cor-acento: #4bd86a;
+    --cor-sombra: rgba(255, 255, 255, 0.05);
+}
 #formularioCriarconta label{
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   margin-bottom: 5px;
 }
