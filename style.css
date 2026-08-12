@@ -685,9 +685,6 @@ footer {
   padding: 30px 20px;
   border-top: 1px solid var(--cor-sombra);
   font-size: 14px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 footer p { 
   margin: 5px 0; 
