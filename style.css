@@ -373,6 +373,9 @@ header h1 { font-size: 24px;
 /* =========================================
     PÁGINA LOGIN
 ========================================= */
+#paginaLogin main {
+  height: 90vh;
+}
 
 #paginaLogin .card.cadastro img{
   object-fit: contain;
