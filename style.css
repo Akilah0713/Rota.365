@@ -380,10 +380,6 @@ header h1 { font-size: 24px;
   justify-content: center;
 }
 
-#paginaCriarConta main {
-  margin: 80px auto;
-}
-
 #paginaLogin .card.cadastro img{
   object-fit: contain;
 }
@@ -534,12 +530,19 @@ button#voltar {
   flex-direction: column;
 }
 #formularioMinhaconta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#paginaCriarConta main {
+  margin: 120px auto 30px;
+  position: relative;
+}
+
+#formularioCriarconta form div {
+  display: flex;
+}
 
 #formularioMinhaconta .card{
     width: 600px;         
