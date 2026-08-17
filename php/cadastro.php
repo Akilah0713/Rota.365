@@ -2,10 +2,10 @@
     include('conexao.php');
     # Captura os dados do formulário de cadastro
     $nome = $_POST['nome'];
-    $sobrenome = $_['sobrenome']
+    $sobrenome = $_['sobrenome'];
     $nascimento = $_POST['nascimento'];
     $cpf = $_POST['cpf'];
-    $rg = $_POST ['rg']
+    $rg = $_POST ['rg'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     # valida dados vazios 
@@ -14,8 +14,13 @@
     $senha_segura = password_hash($senha,PASSWORD_DEFAULT);
     # Cria comando SDQL de inserção de dados
     $sql = "INSERT INTO usuarios (nome, sobrenome, nascimento, cpf, rg, email, senha_segura) VALUES ('$nome', '$sobrenome', '$nascimento', '$cpf', '$rg', '$email', '$senha_segura')";
-    # Executa código acima dentro do banco de dados 
-    $conexao->query($sql);
-    header("Location: loguin.html");
-    exit();
+    # "ssss" indica que os 4 parâmetro são strings
+    $stms->bind_param("ssss", $nome, $sobrenome, $nascimento, $cpf, $rg, $email, $senha_segura);
+    # Executa o código acima dentro do banco de dados
+    if($stms->execute()){
+        # Redireciona o usuário para a página de login após o cadastro
+        header("Location: ../pages/login.php");
+    } else{ echo "Erro ao cadastrar: " . $conexao->error;}
+    $stms->close();
+    $conexao->close();
     ?>
