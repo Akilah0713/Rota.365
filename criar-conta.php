@@ -10,8 +10,8 @@
 
 <body id="paginaCriarConta">
   <header>
-    <a id="logoClaro" href="index.html"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.html" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
 
     <nav class="menu">
        <div class="menu-container">
@@ -21,10 +21,10 @@
         </div>
         
         <ul id="menuLinks">
-          <li><a href="index.html">🏠 Início</a></li>
+          <li><a href="index.php">🏠 Início</a></li>
           <li><a href="#nacionais">✈️ Nacionais</a></li>
           <li><a href="#internacionais">🌍 Internacionais</a></li>
-          <li><a href="reserva.html">🧳 Reservas</a></li>
+          <li><a href="reserva.php">🧳 Reservas</a></li>
           <li><a href="#contato">📞 Contato</a></li>
         </ul>
       </div>
@@ -33,13 +33,13 @@
       <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
-          <a href="account.html">Minha conta</a>
-          <a href="reservas.html">Reservas</a>
+          <a href="account.php">Minha conta</a>
+          <a href="reservas.php">Reservas</a>
           <a href="sair">Sair </a>
         </div>
         <div class="deslogado">
-          <a href="login.html">Entrar</a>
-          <a href="criar-conta.html">Cadastrar</a>
+          <a href="login.php">Entrar</a>
+          <a href="criar-conta.php">Cadastrar</a>
           <a href="./php/logout.php">Sair</a>
         </div>
     </div>
@@ -53,27 +53,24 @@
       <h2>Criar minha conta</h2>
       <h3>Informe os seus dados abaixo para criar sua conta</h3>
 
-      <form>
-        <label>Nome:</label>
-        <input type="text" id="nome" required>
+      <form action="../php/cadastro.php" method="post">
+        <label for="nomeCompleto">Nome Completo:</label>
+        <input name="nomeCompleto" type="text" id="nomeCompleto" required>
 
-        <label>Sobrenome:</label>
-        <input type="text" id="nome" required>
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input name="dataNascimento" type="date" id="dataNascimento" required>
 
-        <label>Data de nascimento:</label>
-        <input type="date" id="datanascimento" required>
+        <label for="cpf">CPF:</label>
+        <input name="cpf" type="number" id="cpf" required>
 
-        <label>CPF:</label>
-        <input type="text" id="nome" required>
+        <label for="rg">RG:</label>
+        <input name="rg" type="number" id="rg" required>
 
-        <label>RG:</label>
-        <input type="text" id="nome" required>
+        <label for="email">Email:</label>
+        <input name"email" type="email" id="email " required>
 
-        <label>Email:</label>
-        <input type="email" id="nome" required>
-
-        <label>Senha:</label>
-        <input type="password" id="nome" required>
+        <label for="senha">Senha:</label>
+        <input name"senha" type="password" id="senha" required>
       </form>
 
 
@@ -85,8 +82,8 @@
       </div>
 
       <div class="container">
-        <a class="button" href="index.html" id="criar">Criar conta</a>
-        <a class="button" href="login.html" id="voltar">Voltar para o login</a>
+        <a class="button" href="index.php" id="criar">Criar conta</a>
+        <a class="button" href="login.php" id="voltar">Voltar para o login</a>
         <p id="erro" class="erro"></p>
       </div>
 
