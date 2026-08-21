@@ -79,7 +79,7 @@
         </div>
   
         <div class="container">
-          <a class="button" href="index.php" id="criar">Criar conta</a>
+          <button class="button" type="submit" id="criar">Criar conta</button>
           <a class="button" href="login.php" id="voltar">Voltar para o login</a>
           <p id="erro" class="erro"></p>
         </div>
