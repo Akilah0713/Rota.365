@@ -53,7 +53,7 @@
       <h2>Criar minha conta</h2>
       <h3>Informe os seus dados abaixo para criar sua conta</h3>
 
-      <form action="../php/cadastro.php" method="post">
+      <form action="./php/cadastro.php" method="post">
         <label for="nomeCompleto">Nome Completo:</label>
         <input name="nomeCompleto" type="text" id="nomeCompleto" required>
 
@@ -67,10 +67,10 @@
         <input name="rg" type="number" id="rg" required>
 
         <label for="email">Email:</label>
-        <input name"email" type="email" id="email " required>
+        <input name="email" type="email" id="email " required>
 
         <label for="senha">Senha:</label>
-        <input name"senha" type="password" id="senha" required>
+        <input name="senha" type="password" id="senha" required>
         <div class="checkbox">
           <input type="checkbox">
           <p>
