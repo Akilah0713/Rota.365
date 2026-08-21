@@ -1,38 +1,47 @@
 <?php
-# Inclui o arquivo de conexão
+// Inclui o arquivo de conexão
 include('conexao.php');
-
-# Executa a função de iniciar sessão do usuário
+// Inicia a sessão
 session_start();
-
-# Armazena dados inseridos pelo usuário
+// Captura os dados enviados pelo formulário
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-
-# Busca o usuário usando Prepared Statements (Seguro)
-$stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email = ?");
+// Verifica se os campos foram preenchidos
+if (empty($email) || empty($senha)) {
+    die("Preencha todos os campos!");
+}
+// Busca o usuário usando Prepared Statement
+$stmt = $conexao->prepare(
+    "SELECT * FROM usuarios WHERE email = ?"
+);
+if (!$stmt) {
+    die("Erro ao preparar a consulta: " . $conexao->error);
+}
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $resultado = $stmt->get_result();
-
-# Verifica se o E-mail do usuário está cadastrado no banco de dados
-if(resultado->num_rows > 0){
+// Verifica se o e-mail está cadastrado
+if ($resultado->num_rows > 0) {
     $usuario = $resultado->fetch_assoc();
-} else {
-    echo"E-mail não cadastrado";
-    header("Location: ../pages/cadastro.html");
-}
+    // Verifica a senha
+    if (password_verify($senha, $usuario['senha_segura'])) {
+        // Cria os dados da sessão
+        $_SESSION['id_usuario'] = $usuario['id_usuario'];
+        $_SESSION['nome'] = $usuario['nome_completo'];
+        $_SESSION['email'] = $usuario['email'];
 
-# Verifica se a senha inserida pelo usuário é igual a senha armazenada no banco de dados
-if(password_verify($senha, $usuario['senha_segura'])){
-    $_SESSION['id_usuario'] = $usuario['id_usuario'];
-    $_SESSION['nome'] = $usuario['nome'];
-    header("Location: ../../public/index.html");
-    exit();
+        // Redireciona para a página inicial
+        header("Location: ../index.php");
+        exit();
+    } else {
+        echo "Senha incorreta!";
+        exit();
+    }
 } else {
-    echo "<p>Senha incorreta!</p>";
+    echo "E-mail não cadastrado!";
     exit();
 }
+// Fecha a consulta e a conexão
 $stmt->close();
 $conexao->close();
-?>    
+?>

@@ -55,12 +55,12 @@
           <p>Informe seus dados para continuar</p>
           <form method="POST" action="./php/login.php">
             <label>Email:</label>
-            <input type="email" id="nome" required placeholder="Email*"></header>
+            <input name="email" type="email" id="nome" required placeholder="Email*"></header>
 
             <label>Senha:</label>
-            <input type="password" id="nome" required placeholder="Senha*">
+            <input name="senha" type="password" id="nome" required placeholder="Senha*">
 
-            <button id="acessar">Acessar conta</button>
+            <button type="submit" id="acessar">Acessar conta</button>
           </form>
         </div>
         <div class="card cadastro">
