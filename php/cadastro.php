@@ -12,7 +12,7 @@
     # Aplica criptografia na senha 
     $senha_segura = password_hash($senha,PASSWORD_DEFAULT);
     # Cria comando SDQL de inserção de dados
-    $sql = "INSERT INTO usuarios (nomeCompleto, cpf, rg, email, senha_segura) VALUES ('$nomeCompleto', '$cpf', '$rg', '$email', '$senha_segura')";
+    $sql = "INSERT INTO usuarios (nome_completo, cpf, rg, email, senha_segura, data_de_nascimento) VALUES ('$nomeCompleto', '$cpf', '$rg', '$email', '$senha_segura', '$nascimento')";
     # "ssss" indica que os 4 parâmetro são strings
     $stms->bind_param("sssss", $nomeCompleto, $cpf, $rg, $email, $senha_segura);
     # Executa o código acima dentro do banco de dados
