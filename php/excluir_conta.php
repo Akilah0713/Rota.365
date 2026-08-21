@@ -20,7 +20,7 @@ $stmt->bind_param("i", $id);
 if ($stmt->execute()) {
     # Se excluiu com sucesso, destrói a sessão e desloga o usuário
     session_destroy();
-    header("Location: ../../public/index.html");
+    header("Location: ../index.php");
     exit();
 } else {
     echo "Erro ao excluir conta: " . $conexao->error;

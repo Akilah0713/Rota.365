@@ -53,43 +53,37 @@
       <h2>Criar minha conta</h2>
       <h3>Informe os seus dados abaixo para criar sua conta</h3>
 
-      <form>
-        <label>Nome:</label>
-        <input type="text" id="nome" required>
+        <form method="POST" action="./php/cadastro.php">
+        <label for="nomeCompleto">Nome Completo:</label>
+        <input type="text" id="nomeCompleto" required>
 
-        <label>Sobrenome:</label>
-        <input type="text" id="nome" required>
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" id="dataNascimento" required>
 
-        <label>Data de nascimento:</label>
-        <input type="date" id="datanascimento" required>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" required>
 
-        <label>CPF:</label>
-        <input type="text" id="nome" required>
+        <label for="rg">RG:</label>
+        <input type="text" id="rg" required>
 
-        <label>RG:</label>
-        <input type="text" id="nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
 
-        <label>Email:</label>
-        <input type="email" id="nome" required>
-
-        <label>Senha:</label>
-        <input type="password" id="nome" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required>
+        <div class="checkbox">
+          <input type="checkbox">
+          <p>
+            Estou ciente e CONCORDO com os termos de aceite e políticas de privacidade da Rota.365
+          </p>
+        </div>
+  
+        <div class="container">
+          <button class="button" type="submit" id="criar">Criar conta</button>
+          <a class="button" href="login.html" id="voltar">Voltar para o login</a>
+          <p id="erro" class="erro"></p>
+        </div>
       </form>
-
-
-      <div class="checkbox">
-        <input type="checkbox">
-        <p>
-          Estou ciente e CONCORDO com os termos de aceite e políticas de privacidade da Rota.365
-        </p>
-      </div>
-
-      <div class="container">
-        <a class="button" href="index.html" id="criar">Criar conta</a>
-        <a class="button" href="login.html" id="voltar">Voltar para o login</a>
-        <p id="erro" class="erro"></p>
-      </div>
-
     </section>
   </main>
   <footer id="contato">
