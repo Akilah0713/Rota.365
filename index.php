@@ -1,4 +1,4 @@
-<html lang="pt-BR">
+<php lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -7,8 +7,8 @@
 </head>
 <body>
   <header>
-    <a id="logoClaro" href="index.html"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.html" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
     <nav class="menu">
        <div class="menu-container">
         
@@ -17,10 +17,10 @@
         </div>
         
         <ul id="menuLinks">
-          <li><a href="index.html">🏠 Início</a></li>
+          <li><a href="index.php">🏠 Início</a></li>
           <li><a href="#nacionais">✈️ Nacionais</a></li>
           <li><a href="#internacionais">🌍 Internacionais</a></li>
-          <li><a href="reservas.html">🧳 Reservas</a></li>
+          <li><a href="reservas.php">🧳 Reservas</a></li>
           <li><a href="#contato">📞 Contato</a></li>
         </ul>
       </div>
@@ -29,13 +29,13 @@
       <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
-          <a href="account.html">Minha conta</a>
-          <a href="reservas.html">Reservas</a>
+          <a href="account.php">Minha conta</a>
+          <a href="reservas.php">Reservas</a>
           <a href="sair">Sair </a>
         </div>
         <div class="deslogado">
-          <a href="login.html">Entrar</a>
-          <a href="criar-conta.html">Cadastrar</a>
+          <a href="login.php">Entrar</a>
+          <a href="criar-conta.php">Cadastrar</a>
           <a href="./php/logout.php">Sair</a>
         </div>
     </div>
@@ -86,7 +86,7 @@
         <p>Brasília → Rio de Janeiro = 1.160 km</p>
         <p class="preco-novo">Executiva: R$ 928,00</p>
         <p class="preco-antigo">Padrão: R$ 580,00</p>
-        <a href="reservas.html?destino=Rio%20de%20Janeiro">Reservar</a>
+        <a href="reservas.php?destino=Rio%20de%20Janeiro">Reservar</a>
       </div>
 
       <div class="card">
@@ -95,7 +95,7 @@
         <p>Brasília → Salvador = 1.089 km</p>
         <p class="preco-novo">Executiva: R$ 579,00</p>
         <p class="preco-antigo">Padrão: R$ 390,00</p>
-        <a href="reservas.html?destino=Salvador">Reservar</a>
+        <a href="reservas.php?destino=Salvador">Reservar</a>
       </div>
 
       <div class="card">
@@ -104,7 +104,7 @@
         <p>Brasília → Porto Alegre = 1.620 km</p>
         <p class="preco-novo">Executiva: R$ 750,00</p>
         <p class="preco-antigo">Padrão: R$ 300,00</p>
-        <a href="reservas.html?destino=Porto%20Alegre">Reservar</a>
+        <a href="reservas.php?destino=Porto%20Alegre">Reservar</a>
       </div>
 
       <div class="card">
@@ -113,7 +113,7 @@
         <p>Brasília → Espirito Santo = 940 km</p>
         <p class="preco-novo">Executiva: R$ 600,00</p>
         <p class="preco-antigo">Padrão: R$ 250,00</p>
-        <a href="reservas.html?destino=Espirito%20Santo">Reservar</a>
+        <a href="reservas.php?destino=Espirito%20Santo">Reservar</a>
       </div>
 
       <div class="card">
@@ -122,7 +122,7 @@
         <p>Brasília → Icaraí de Amontada = 1.440 km</p>
         <p class="preco-novo">Executiva: R$ 1.152,00</p>
         <p class="preco-antigo">Padrão: R$ 720,00</p>
-        <a href="reservas.html?destino=Icara%C3%AD%20de%20Amontada">Reservar</a>
+        <a href="reservas.php?destino=Icara%C3%AD%20de%20Amontada">Reservar</a>
       </div>
 
       <div class="card">
@@ -131,7 +131,7 @@
         <p>Brasília → Nobres = 1.600 km</p>
         <p class="preco-novo">Executiva: R$ 1.280,00</p>
         <p class="preco-antigo">Padrão: R$ 800,00</p>
-        <a href="reservas.html?destino=Nobres">Reservar</a>
+        <a href="reservas.php?destino=Nobres">Reservar</a>
       </div>
 
       <div class="card">
@@ -140,7 +140,7 @@
         <p>Brasília → Rio Grande do Sul = 2.022 km</p>
         <p class="preco-novo">Executiva: R$ 1.617,00</p>
         <p class="preco-antigo">Padrão: R$ 1.011,00</p>
-        <a href="reservas.html?destino=Rio%20Grande%20do%20Sul">Reservar</a>
+        <a href="reservas.php?destino=Rio%20Grande%20do%20Sul">Reservar</a>
       </div>
 
       <div class="card">
@@ -149,7 +149,7 @@
         <p>Brasília → Balneário Camboriú = 1.596.6 km</p>
         <p class="preco-novo">Executiva: R$ 1.276,00</p>
         <p class="preco-antigo">Padrão: R$ 798,00</p>
-        <a href="reservas.html?destino=Balne%C3%A1rio%20Cambori%C3%BA">Reservar</a>
+        <a href="reservas.php?destino=Balne%C3%A1rio%20Cambori%C3%BA">Reservar</a>
       </div>
 
       <div class="card">
@@ -158,7 +158,7 @@
         <p>Brasília → Jericoacoara = 2.096.4 km</p>
         <p class="preco-novo">Executiva: R$ 1.676,00</p>
         <p class="preco-antigo">Padrão: R$ 1.048,00</p>
-        <a href="reservas.html?destino=Jericoacoara">Reservar</a>
+        <a href="reservas.php?destino=Jericoacoara">Reservar</a>
       </div>
     </section>
     <section class="anuncio pequeno">
@@ -179,7 +179,7 @@
         <p>Brasília → Veneza = 7.454 km</p>
         <p class="preco-novo">Executiva: R$ 5.963,00</p>
         <p class="preco-antigo">Padrão: R$ 3.727,00</p>
-        <a href="reservas.html?destino=Veneza">Reservar</a>
+        <a href="reservas.php?destino=Veneza">Reservar</a>
       </div>
 
       <div class="card">
@@ -188,7 +188,7 @@
         <p>Brasília → Seoul = 17.620 km</p>
         <p class="preco-novo">Executiva: R$ 9.000,00</p>
         <p class="preco-antigo">Padrão: R$ 5.000,00</p>
-        <a href="reservas.html?destino=Seoul">Reservar</a>
+        <a href="reservas.php?destino=Seoul">Reservar</a>
       </div>
 
       <div class="card">
@@ -197,7 +197,7 @@
         <p>Brasília → Istambul = 10.095 km</p>
         <p class="preco-novo">Executiva: R$ 6.500,00</p>
         <p class="preco-antigo">Padrão: R$ 3.000,00</p>
-        <a href="reservas.html?destino=Istambul">Reservar</a>
+        <a href="reservas.php?destino=Istambul">Reservar</a>
       </div>
 
       <div class="card">
@@ -206,7 +206,7 @@
         <p>Brasília → Paris = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 7.000,00</p>
         <p class="preco-antigo">Padrão: R$ 4.800,00</p>
-        <a href="reservas.html?destino=Paris">Reservar</a>
+        <a href="reservas.php?destino=Paris">Reservar</a>
       </div>
 
       <div class="card">
@@ -215,7 +215,7 @@
         <p>Brasília → Orlando = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 4.500,00</p>
         <p class="preco-antigo">Padrão: R$ 2.700,00</p>
-        <a href="reservas.html?destino=Orlando">Reservar</a>
+        <a href="reservas.php?destino=Orlando">Reservar</a>
       </div>
 
       <div class="card">
@@ -224,7 +224,7 @@
         <p>Brasília → Singapura = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 8.800,00</p>
         <p class="preco-antigo">Padrão: R$ 7.600,00</p>
-        <a href="reservas.html?destino=Singapura">Reservar</a>
+        <a href="reservas.php?destino=Singapura">Reservar</a>
       </div>
 
       <div class="card">
@@ -233,7 +233,7 @@
         <p>Brasília → Dubai = 12.059 km</p>
         <p class="preco-novo">Executiva: R$ 7.200,00</p>
         <p class="preco-antigo">Padrão: R$ 3.500,00</p>
-        <a href="reservas.html?destino=Dubai">Reservar</a>
+        <a href="reservas.php?destino=Dubai">Reservar</a>
       </div>
 
       <div class="card">
@@ -242,7 +242,7 @@
         <p>Brasília → Tokyo = 16.808 km</p>
         <p class="preco-novo">Executiva: R$ 13.446,00</p>
         <p class="preco-antigo">Padrão: R$ 8.404,00</p>
-        <a href="reservas.html?destino=Tokyo">Reservar</a>
+        <a href="reservas.php?destino=Tokyo">Reservar</a>
       </div>
 
       <div class="card">
@@ -251,7 +251,7 @@
         <p>Brasília → Moscou = 11.179 km</p>
         <p class="preco-novo">Executiva: R$ 8.943,00</p>
         <p class="preco-antigo">Padrão: R$ 5.588,00</p>
-        <a href="reservas.html?destino=Moscou">Reservar</a>
+        <a href="reservas.php?destino=Moscou">Reservar</a>
       </div>
     </section>
   </main>
@@ -275,4 +275,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+</php>

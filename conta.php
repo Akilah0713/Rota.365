@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE php>
+<php lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-    <a id="logoClaro" href="index.html"><img src="./imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.html" style="display: none;"><img src="./imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="./imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
     
     <nav class="menu">
        <div class="menu-container">
@@ -19,10 +19,10 @@
         </div>
         
       <ul id="menuLinks">
-        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="index.php">🏠 Início</a></li>
         <li><a href="#nacionais">✈️ Nacionais</a></li>
         <li><a href="#internacionais">🌍 Internacionais</a></li>
-        <li><a href="reserva.html">🧳 Reservas</a></li>
+        <li><a href="reserva.php">🧳 Reservas</a></li>
         <li><a href="#contato">📞 Contato</a></li>
       </ul>
     </div>
@@ -32,13 +32,13 @@
       <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
-          <a href="account.html">Minha conta</a>
-          <a href="reservas.html">Reservas</a>
+          <a href="account.php">Minha conta</a>
+          <a href="reservas.php">Reservas</a>
           <a href="sair">Sair </a>
         </div>
         <div class="deslogado">
-          <a href="login.html">Entrar</a>
-          <a href="criar-conta.html">Cadastrar</a>
+          <a href="login.php">Entrar</a>
+          <a href="criar-conta.php">Cadastrar</a>
           <a href="./php/logout.php">Sair</a>
         </div>
     </div>
@@ -75,4 +75,4 @@
 
      <script src="script.js"></script>
 </body>
-</html>
+</php>
