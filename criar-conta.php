@@ -55,22 +55,22 @@
 
         <form method="POST" action="./php/cadastro.php">
         <label for="nomeCompleto">Nome Completo:</label>
-        <input type="text" id="nomeCompleto" required>
+        <input name="nomeCompleto" type="text" id="nomeCompleto" required>
 
         <label for="dataNascimento">Data de nascimento:</label>
-        <input type="date" id="dataNascimento" required>
+        <input name="dataNascimento" type="date" id="dataNascimento" required>
 
         <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" required>
+        <input name="cpf" type="text" id="cpf" required>
 
         <label for="rg">RG:</label>
-        <input type="text" id="rg" required>
+        <input name="rg" type="text" id="rg" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" required>
+        <input name="email" type="email" id="email" required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" required>
+        <input name="senha" type="password" id="senha" required>
         <div class="checkbox">
           <input type="checkbox">
           <p>
