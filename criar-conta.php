@@ -71,22 +71,19 @@
 
         <label for="senha">Senha:</label>
         <input name"senha" type="password" id="senha" required>
+        <div class="checkbox">
+          <input type="checkbox">
+          <p>
+            Estou ciente e CONCORDO com os termos de aceite e políticas de privacidade da Rota.365
+          </p>
+        </div>
+  
+        <div class="container">
+          <a class="button" href="index.php" id="criar">Criar conta</a>
+          <a class="button" href="login.php" id="voltar">Voltar para o login</a>
+          <p id="erro" class="erro"></p>
+        </div>
       </form>
-
-
-      <div class="checkbox">
-        <input type="checkbox">
-        <p>
-          Estou ciente e CONCORDO com os termos de aceite e políticas de privacidade da Rota.365
-        </p>
-      </div>
-
-      <div class="container">
-        <a class="button" href="index.php" id="criar">Criar conta</a>
-        <a class="button" href="login.php" id="voltar">Voltar para o login</a>
-        <p id="erro" class="erro"></p>
-      </div>
-
     </section>
   </main>
   <footer id="contato">
