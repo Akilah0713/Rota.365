@@ -53,24 +53,24 @@
       <h2>Criar minha conta</h2>
       <h3>Informe os seus dados abaixo para criar sua conta</h3>
 
-      <form action="./php/cadastro.php" method="post">
+        <form method="POST" action="./php/cadastro.php">
         <label for="nomeCompleto">Nome Completo:</label>
-        <input name="nomeCompleto" type="text" id="nomeCompleto" required>
+        <input type="text" id="nomeCompleto" required>
 
         <label for="dataNascimento">Data de nascimento:</label>
-        <input name="dataNascimento" type="date" id="dataNascimento" required>
+        <input type="date" id="dataNascimento" required>
 
         <label for="cpf">CPF:</label>
-        <input name="cpf" type="number" id="cpf" required>
+        <input type="text" id="cpf" required>
 
         <label for="rg">RG:</label>
-        <input name="rg" type="number" id="rg" required>
+        <input type="text" id="rg" required>
 
         <label for="email">Email:</label>
-        <input name="email" type="email" id="email " required>
+        <input type="email" id="email" required>
 
         <label for="senha">Senha:</label>
-        <input name="senha" type="password" id="senha" required>
+        <input type="password" id="senha" required>
         <div class="checkbox">
           <input type="checkbox">
           <p>
@@ -80,7 +80,7 @@
   
         <div class="container">
           <button class="button" type="submit" id="criar">Criar conta</button>
-          <a class="button" href="login.php" id="voltar">Voltar para o login</a>
+          <a class="button" href="login.html" id="voltar">Voltar para o login</a>
           <p id="erro" class="erro"></p>
         </div>
       </form>

@@ -53,7 +53,7 @@
         <div class="card login">
           <h2>Acesse sua conta</h2>
           <p>Informe seus dados para continuar</p>
-          <form>
+          <form method="POST" action="./php/login.php">
             <label>Email:</label>
             <input type="email" id="nome" required placeholder="Email*"></header>
 
