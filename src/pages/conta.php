@@ -46,6 +46,16 @@
     <button id="modoEscuro">🌙</button>
   </header>
 
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Menu Perfil</a></li>
+      <li><a href="#"> Meus Favoritos</a></li>
+      <li><a href="#"> Minhas Compras</a></li>
+      <li><a href="../php/logout.php">Sair</a></li>
+    </ul>
+  </aside>
+
   <main>
     <section id="formularioMinhaconta">
 
