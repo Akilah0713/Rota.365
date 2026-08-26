@@ -10,8 +10,8 @@
 
 <body id="paginaLogin">
   <header>
-    <a id="logoClaro" href="index.php"><img src="../assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.php" style="display: none;"><img src="../assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="../../public/index.php"><img src="../assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="../../public/index.php" style="display: none;"><img src="../assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
     <nav class="menu">
        <div class="menu-container">
         
@@ -20,10 +20,10 @@
         </div>
         
         <ul id="menuLinks">
-          <li><a href="index.php">🏠 Início</a></li>
+          <li><a href="../../public/index.php">🏠 Início</a></li>
           <li><a href="#nacionais">✈️ Nacionais</a></li>
           <li><a href="#internacionais">🌍 Internacionais</a></li>
-          <li><a href="reserva.php">🧳 Reservas</a></li>
+          <li><a href="../src/pages/reserva.php">🧳 Reservas</a></li>
           <li><a href="#contato">📞 Contato</a></li>
         </ul>
       </div>
@@ -53,7 +53,7 @@
         <div class="card login">
           <h2>Acesse sua conta</h2>
           <p>Informe seus dados para continuar</p>
-          <form method="POST" action="./php/login.php">
+          <form method="POST" action="../php/login.php">
             <label>Email:</label>
             <input name="email" type="email" id="nome" required placeholder="Email*"></header>
 

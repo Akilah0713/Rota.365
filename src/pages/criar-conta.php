@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criar conta</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body id="paginaCriarConta">
   <header>
-    <a id="logoClaro" href="index.php"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="../../public/index.php"><img src="../assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="../../public/index.php" style="display: none;"><img src="../assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
 
     <nav class="menu">
        <div class="menu-container">
@@ -21,7 +21,7 @@
         </div>
         
         <ul id="menuLinks">
-          <li><a href="index.php">🏠 Início</a></li>
+          <li><a href="../../public/index.php">🏠 Início</a></li>
           <li><a href="#nacionais">✈️ Nacionais</a></li>
           <li><a href="#internacionais">🌍 Internacionais</a></li>
           <li><a href="reserva.php">🧳 Reservas</a></li>
@@ -30,7 +30,7 @@
       </div>
     </nav>
     <div class="menu dropdown">
-      <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
+      <button class="dropbtn"><img src="../assets/imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
           <a href="account.php">Minha conta</a>
@@ -80,7 +80,7 @@
   
         <div class="container">
           <button class="button" type="submit" id="criar">Criar conta</button>
-          <a class="button" href="login.html" id="voltar">Voltar para o login</a>
+          <a class="button" href="/login.php" id="voltar">Voltar para o login</a>
           <p id="erro" class="erro"></p>
         </div>
       </form>
@@ -91,7 +91,7 @@
       <p>Redes sociais: @rota365</p>
       <p>Todos os Direitos reservados</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

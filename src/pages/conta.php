@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-    <a id="logoClaro" href="index.php"><img src="./imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="../assets/imagens/imagem logo modo claro.jpg" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="../assets/imagens/imagem logo modo escuro.jpg" alt="Logo escura"></a>
     
     <nav class="menu">
        <div class="menu-container">
@@ -85,6 +85,6 @@
         </form> 
       </div>
 
-     <script src="../src/assets/js/script.js"></script>
+     <script src="../assets/js/script.js"></script>
 </body>
 </html>

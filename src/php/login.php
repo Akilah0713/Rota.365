@@ -31,7 +31,7 @@ if ($resultado->num_rows > 0) {
         $_SESSION['email'] = $usuario['email'];
 
         // Redireciona para a página inicial
-        header("Location: ../index.php");
+        header("Location: ../../public/index.php");
         exit();
     } else {
         echo "Senha incorreta!";
