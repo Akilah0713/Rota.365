@@ -87,4 +87,4 @@
 
      <script src="../src/assets/js/script.js"></script>
 </body>
-</php>
+</html>
