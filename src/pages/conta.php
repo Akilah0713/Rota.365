@@ -56,31 +56,33 @@
     </ul>
   </aside>
 
-  <main>
-    <section id="formularioMinhaconta">
-
+  <main class="content">      
+    <section id="formularioMinhaconta">      
       <div class="card"> 
-      <h2>Minha conta</h2>
+        <h2>Minha conta</h2>
+        <p>Gerencie suas informações abaixo:</p>  
+        <!-- O formulário virá aqui -->        
+        <form action="../php/dashboard.php"
+        method="POST">
+        <!-- Campos virão aqui --> 
+          <label>Nome completo:</label>
+          <input type="text" id="nome" required></header>
 
-      <form>
-      <label>Nome completo:</label>
-      <input type="text" id="nome" required></header>
+          <label>Data de nascimento:</label>
+          <input type="date" id="datanascimento" required>
 
-      <label>Data de nascimento:</label>
-      <input type="date" id="datanascimento" required>
+          <label>CPF:</label>
+          <input type="text" id="nome" required></header>
 
-      <label>CPF:</label>
-      <input type="text" id="nome" required></header>
+          <label>RG:</label>
+          <input type="text" id="nome" required></header>
 
-      <label>RG:</label>
-      <input type="text" id="nome" required></header>
+          <label>Email cadastrado:</label>
+          <input type="email" id="nome" required></header>
 
-      <label>Email cadastrado:</label>
-      <input type="email" id="nome" required></header>
-
-      <button id="Atualizar">Atualizar dados</button>
-      <p id="erro" class="erro"></p>
-      </form>
+          <button id="Atualizar">Atualizar dados</button>
+          <p id="erro" class="erro"></p>
+        </form> 
       </div>
 
      <script src="script.js"></script>

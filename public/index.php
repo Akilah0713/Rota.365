@@ -1,14 +1,15 @@
-<php lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Rota.365 - Reservas de Viagem</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../src/assets/css/style.css">
 </head>
 <body>
   <header>
-    <a id="logoClaro" href="index.php"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="../src/assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="../src/assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
     <nav class="menu">
        <div class="menu-container">
         
@@ -26,7 +27,7 @@
       </div>
     </nav>
     <div class="menu dropdown">
-      <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
+      <button class="dropbtn"><img src="../src/assets/imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
           <a href="account.php">Minha conta</a>
@@ -42,22 +43,22 @@
     </div>
     
     <button id="modoEscuro">
-      <img src="./imagens/">🌙</button>
+      <img src="../src/assets/imagens/">🌙</button>
   </header>
 
   <section class="carrossel">
     <div class="carrossel-container">
       <div class="slide ativo">
-        <img src="./imagens/pexels-architecture-1868667.jpg" alt="Destino 1">
+        <img src="../src/assets/imagens/pexels-architecture-1868667.jpg" alt="Destino 1">
       </div>
       <div class="slide">
-        <img src="./imagens/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash.jpg" alt="Destino 2">
+        <img src="../src/assets/imagens/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash.jpg" alt="Destino 2">
       </div>
       <div class="slide">
-        <img src="./imagens/john-wilander-keT-INMBlsY-unsplash.jpg" alt="Destino 3">
+        <img src="../src/assets/imagens/john-wilander-keT-INMBlsY-unsplash.jpg" alt="Destino 3">
       </div>
       <div class="slide">
-        <img src="./imagens/leonard-cotte-R5scocnOOdM-unsplash.jpg" alt="Destino 4">
+        <img src="../src/assets/imagens/leonard-cotte-R5scocnOOdM-unsplash.jpg" alt="Destino 4">
       </div>
       <button class="anterior">&#10094;</button>
       <button class="proximo">&#10095;</button>
@@ -81,7 +82,7 @@
 
     <section class="destinos">
       <div class="card">
-        <img src="./imagens/cidade/rio de janeiro.jpg" alt="Rio de Janeiro">
+        <img src="../src/assets/imagens/cidade/rio de janeiro.jpg" alt="Rio de Janeiro">
         <h3>Rio de Janeiro</h3>
         <p>Brasília → Rio de Janeiro = 1.160 km</p>
         <p class="preco-novo">Executiva: R$ 928,00</p>
@@ -90,7 +91,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Salvador 2.jpg" alt="Salvador">
+        <img src="../src/assets/imagens/cidade/Salvador 2.jpg" alt="Salvador">
         <h3>Salvador</h3>
         <p>Brasília → Salvador = 1.089 km</p>
         <p class="preco-novo">Executiva: R$ 579,00</p>
@@ -99,7 +100,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Porto Alegre.jpg" alt="PortoAlegre">
+        <img src="../src/assets/imagens/cidade/Porto Alegre.jpg" alt="PortoAlegre">
         <h3>Porto Alegre</h3>
         <p>Brasília → Porto Alegre = 1.620 km</p>
         <p class="preco-novo">Executiva: R$ 750,00</p>
@@ -108,7 +109,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Esapirito santos.jpg" alt="Espirito Santo">
+        <img src="../src/assets/imagens/cidade/Esapirito santos.jpg" alt="Espirito Santo">
         <h3>Espirito Santo</h3>
         <p>Brasília → Espirito Santo = 940 km</p>
         <p class="preco-novo">Executiva: R$ 600,00</p>
@@ -117,7 +118,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/icaraí.jpg" alt="Icaraí de Amontada">
+        <img src="../src/assets/imagens/cidade/icaraí.jpg" alt="Icaraí de Amontada">
         <h3>Icaraí de Amontada</h3>
         <p>Brasília → Icaraí de Amontada = 1.440 km</p>
         <p class="preco-novo">Executiva: R$ 1.152,00</p>
@@ -126,7 +127,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Nobres.jpg" alt="Nobres">
+        <img src="../src/assets/imagens/cidade/Nobres.jpg" alt="Nobres">
         <h3>Nobres</h3>
         <p>Brasília → Nobres = 1.600 km</p>
         <p class="preco-novo">Executiva: R$ 1.280,00</p>
@@ -135,7 +136,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/rioGrandeDoSul.jpg" alt="Rio Grande do Sul">
+        <img src="../src/assets/imagens/cidade/rioGrandeDoSul.jpg" alt="Rio Grande do Sul">
         <h3>Rio Grande do Sul</h3>
         <p>Brasília → Rio Grande do Sul = 2.022 km</p>
         <p class="preco-novo">Executiva: R$ 1.617,00</p>
@@ -144,7 +145,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/balneario.jpg" alt="balneario">
+        <img src="../src/assets/imagens/cidade/balneario.jpg" alt="balneario">
         <h3>Balneário Camboriú</h3>
         <p>Brasília → Balneário Camboriú = 1.596.6 km</p>
         <p class="preco-novo">Executiva: R$ 1.276,00</p>
@@ -153,7 +154,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/jericoacoara.jpg" alt="Jericoacoara">
+        <img src="../src/assets/imagens/cidade/jericoacoara.jpg" alt="Jericoacoara">
         <h3>Jericoacoara</h3>
         <p>Brasília → Jericoacoara = 2.096.4 km</p>
         <p class="preco-novo">Executiva: R$ 1.676,00</p>
@@ -174,7 +175,7 @@
     <h2 id="internacionais">Viagens Internacionais</h2>
     <section class="destinos">
       <div class="card">
-        <img src="./imagens/cidade/Veneza.jpg" alt="Veneza">
+        <img src="../src/assets/imagens/cidade/Veneza.jpg" alt="Veneza">
         <h3>Veneza</h3>
         <p>Brasília → Veneza = 7.454 km</p>
         <p class="preco-novo">Executiva: R$ 5.963,00</p>
@@ -183,7 +184,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Seoul 2.jpg" alt="Seoul">
+        <img src="../src/assets/imagens/cidade/Seoul 2.jpg" alt="Seoul">
         <h3>Seoul</h3>
         <p>Brasília → Seoul = 17.620 km</p>
         <p class="preco-novo">Executiva: R$ 9.000,00</p>
@@ -192,7 +193,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Istambul.jpg" alt="Istambul">
+        <img src="../src/assets/imagens/cidade/Istambul.jpg" alt="Istambul">
         <h3>Istambul</h3>
         <p>Brasília → Istambul = 10.095 km</p>
         <p class="preco-novo">Executiva: R$ 6.500,00</p>
@@ -201,7 +202,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Paris 2.jpg" alt="Paris">
+        <img src="../src/assets/imagens/cidade/Paris 2.jpg" alt="Paris">
         <h3>Paris</h3>
         <p>Brasília → Paris = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 7.000,00</p>
@@ -210,7 +211,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Orlando 2.jpg" alt="Orlando">
+        <img src="../src/assets/imagens/cidade/Orlando 2.jpg" alt="Orlando">
         <h3>Orlando</h3>
         <p>Brasília → Orlando = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 4.500,00</p>
@@ -219,7 +220,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/singapura.jpg" alt="singapura">
+        <img src="../src/assets/imagens/cidade/singapura.jpg" alt="singapura">
         <h3>Singapura</h3>
         <p>Brasília → Singapura = 8.700 km</p>
         <p class="preco-novo">Executiva: R$ 8.800,00</p>
@@ -228,7 +229,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Dubai 2.jpg" alt="Dubai">
+        <img src="../src/assets/imagens/cidade/Dubai 2.jpg" alt="Dubai">
         <h3>Dubai</h3>
         <p>Brasília → Dubai = 12.059 km</p>
         <p class="preco-novo">Executiva: R$ 7.200,00</p>
@@ -237,7 +238,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/Tokyo.jpg" alt="Tokyo">
+        <img src="../src/assets/imagens/cidade/Tokyo.jpg" alt="Tokyo">
         <h3>Tokyo</h3>
         <p>Brasília → Tokyo = 16.808 km</p>
         <p class="preco-novo">Executiva: R$ 13.446,00</p>
@@ -246,7 +247,7 @@
       </div>
 
       <div class="card">
-        <img src="./imagens/cidade/moscou.jpg" alt="Moscou">
+        <img src="../src/assets/imagens/cidade/moscou.jpg" alt="Moscou">
         <h3>Moscou</h3>
         <p>Brasília → Moscou = 11.179 km</p>
         <p class="preco-novo">Executiva: R$ 8.943,00</p>
@@ -273,6 +274,6 @@
     <p>Todos os Direitos reservados</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../src/assets/js/script.js"></script>
 </body>
 </php>
