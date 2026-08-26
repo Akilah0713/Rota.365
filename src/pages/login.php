@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body id="paginaLogin">
   <header>
-    <a id="logoClaro" href="index.php"><img src="./imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
-    <a id="logoEscuro" href="index.php" style="display: none;"><img src="./imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    <a id="logoClaro" href="index.php"><img src="../assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
+    <a id="logoEscuro" href="index.php" style="display: none;"><img src="../assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
     <nav class="menu">
        <div class="menu-container">
         
@@ -29,7 +29,7 @@
       </div>
     </nav>
     <div class="menu dropdown">
-      <button class="dropbtn"><img src="./imagens/usuários modo claro.jpg"></button>
+      <button class="dropbtn"><img src="../assets/imagens/usuários modo claro.jpg"></button>
       <div class="dropdown-content">
         <div class="logado d-none">
           <a href="account.php">Minha conta</a>
@@ -64,7 +64,7 @@
           </form>
         </div>
         <div class="card cadastro">
-          <img src="imagens/usuarios.png">
+          <img src="../assets/imagens/usuarios.png">
           <h2>Novo por aqui?</h2>
           <p>Crie sua conta e aproveite todos os benefícios de ser um cliente Rota.365</p>
           <a href="criar-conta.php" id="criar">Criar conta</a>
@@ -78,7 +78,7 @@
        <p>Todos os Direitos reservados</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../assets/js/script.js"></script>
 
 </body>
 
