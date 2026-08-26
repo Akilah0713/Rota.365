@@ -1,10 +1,10 @@
-<!DOCTYPE php>
-<php lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha conta </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="../src/assets/css/style.css">
 </head>
 <body>
     <header>
@@ -85,6 +85,6 @@
         </form> 
       </div>
 
-     <script src="script.js"></script>
+     <script src="../src/assets/js/script.js"></script>
 </body>
 </php>
