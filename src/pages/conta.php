@@ -36,7 +36,7 @@ if ($hora >= 5 && $hora < 12) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Minha Conta</title>
-  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
@@ -78,17 +78,18 @@ if ($hora >= 5 && $hora < 12) {
     <button id="modoEscuro">🌙</button>
   </header>
 
-  <aside class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#">Menu Perfil</a></li>
-      <li><a href="#"> Meus Favoritos</a></li>
-      <li><a href="#"> Minhas Compras</a></li>
-      <li><a href="../php/logout.php">Sair</a></li>
-    </ul>
-  </aside>
-
+  
+  
   <main class="content">      
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Menu Perfil</a></li>
+        <li><a href="#"> Meus Favoritos</a></li>
+        <li><a href="#"> Minhas Compras</a></li>
+        <li><a href="../php/logout.php">Sair</a></li>
+      </ul>
+    </aside>
     <section id="formularioMinhaconta">      
       <div class="card"> 
         <h2><?= $saudacao ?>, <span class="destaque-nome"><?php htmlspecialchars($nome_exibicao); ?></span>! 👋 </h2>

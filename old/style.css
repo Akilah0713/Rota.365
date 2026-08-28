@@ -154,6 +154,66 @@ header h1 { font-size: 24px;
 }
 
 /* =========================================
+   MENU LATERAL - PERFIL
+========================================= */
+
+.content {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+  gap: 30px;
+}
+
+/* Menu lateral */
+.sidebar {
+  width: 250px;
+  background: var(--cor-fundo-header);
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 8px var(--cor-sombra);
+  height: fit-content;
+}
+
+/* Título */
+.sidebar h2 {
+  margin: 0 0 20px;
+  color: var(--cor-primaria);
+  font-size: 22px;
+  text-align: center;
+}
+
+/* Lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Itens */
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+.sidebar a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: var(--cor-texto-claro);
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.sidebar a:hover {
+  background: var(--cor-primaria);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* =========================================
    CARROSSEL
 ========================================= */
 .carrossel { 
