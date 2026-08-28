@@ -1,6 +1,6 @@
 <?php
 
-$nome_exibicao = !empty($usuario{'nome_social'}) ? $usuario{'nome_social'} : $usuario{'nome'};
+$nome_exibicao = !empty($usuario['nome_social']) ? $usuario['nome_social'] : $usuario['nome'];
 date_default_timezone_set('America/Sao_Paulo');
 
 $hora = (int) date('H');
