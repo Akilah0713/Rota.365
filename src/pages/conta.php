@@ -1,6 +1,23 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 
-$nome_exibicao = !empty($usuario['nome_social']) ? $usuario['nome_social'] : $usuario['nome'];
+include("../php/conexao.php");
+
+if (!isset($_SESSION['id_usuario'])) {
+  header("Location: login.php");
+  exit();
+}
+
+$sql = "SELECT nome_completo, data_de_nascimento, email, tipo_usuario, pergunta_seguranca FROM usuarios WHERE id_usuario = ?";
+$stms = $conexao->prepare($sql);
+$stms->bind_param("i", $id_usuario);
+$stms->execute();
+$usuario = $stms->get_result()->fetch_assoc();
+$stms->close();
+
+$nome_exibicao = !empty($usuario['nome_completo']);
 date_default_timezone_set('America/Sao_Paulo');
 
 $hora = (int) date('H');
@@ -74,7 +91,7 @@ if ($hora >= 5 && $hora < 12) {
   <main class="content">      
     <section id="formularioMinhaconta">      
       <div class="card"> 
-        <h2><?= $saudacao ?>, <span class="destaque-nome"><?= htmlspecialchars($nome_exibicao) ?></span>! 👋 </h2>
+        <h2><?= $saudacao ?>, <span class="destaque-nome"><?php htmlspecialchars($nome_exibicao); ?></span>! 👋 </h2>
         <p>Gerencie suas informações abaixo:</p>  
         <!-- O formulário virá aqui -->        
         <form action="../php/dashboard.php"

@@ -36,8 +36,8 @@ if (session_status() === PHP_SESSION_NONE) {
       <div class="dropdown-content">
 
         <?php if (isset($_SESSION['id_usuario'])): ?>
-          <a href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
-          <a href="../php/logout.php" class="nav-link">Sair</a>
+          <a href="../src/pages/conta.php" class="nav-link <?php echo ($pagina_atual === 'conta.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+          <a href="../src/php/logout.php" class="nav-link">Sair</a>
         <?php else: ?>
           <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === 'login.php') ? 'ativo' : ''; ?>">Entrar</a>
           <a href="../src/pages/criar-conta.php" class="nav-link <?php echo ($pagina_atual === 'cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>

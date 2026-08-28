@@ -6,6 +6,6 @@ session_unset();
 // Destrói a sessão
 session_destroy();
 // Volta para a página de login
-header("Location: login.php");
+header("Location: ../pages/login.php");
 exit();
 ?>
