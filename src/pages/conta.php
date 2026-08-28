@@ -1,3 +1,18 @@
+<?php
+
+$nome_exibicao = !empty($usuario{'nome_social'}) ? $usuario{'nome_social'} : $usuario{'nome'};
+date_default_timezone_set('America/Sao_Paulo');
+
+$hora = (int) date('H');
+if ($hora >= 5 && $hora < 12) {
+  $saudacao = "Bom dia";    
+} elseif ($hora >= 12 && $hora < 18) {
+  $saudacao = "Boa tarde";
+} else {
+  $saudacao = "Boa noite";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +74,7 @@
   <main class="content">      
     <section id="formularioMinhaconta">      
       <div class="card"> 
-        <h2>Minha conta</h2>
+        <h2><?= $saudacao ?>, <span class="destaque-nome"><?= htmlspecialchars($nome_exibicao) ?></span>! 👋 </h2>
         <p>Gerencie suas informações abaixo:</p>  
         <!-- O formulário virá aqui -->        
         <form action="../php/dashboard.php"
