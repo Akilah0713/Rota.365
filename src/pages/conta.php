@@ -87,7 +87,6 @@ if ($hora >= 5 && $hora < 12) {
         <li><a href="#">Menu Perfil</a></li>
         <li><a href="#"> Meus Favoritos</a></li>
         <li><a href="#"> Minhas Compras</a></li>
-        <li><a href="../php/logout.php">Sair</a></li>
       </ul>
     </aside>
     <section id="formularioMinhaconta">      

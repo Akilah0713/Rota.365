@@ -15,7 +15,41 @@ if (session_status() === PHP_SESSION_NONE) {
   <header>
     <a id="logoClaro" href="index.php"><img src="../src/assets/imagens/logo-modo-claro-sem-fundo.png" alt="Logo clara"></a>
     <a id="logoEscuro" href="index.php" style="display: none;"><img src="../src/assets/imagens/logo-modo-escuro-sem-fundo.png" alt="Logo escura"></a>
+    
+    <div class="busca-destino">
+    <form method="GET" action="../pages/busca.php">
+        <select name="destino" id="destino">
+            <option value="" <?= empty($destino) ? 'selected' : '' ?>>Todos os destinos</option>
+
+            <option value="Rio de Janeiro" <?= (isset($destino) && $destino === 'Rio de Janeiro') ? 'selected' : '' ?>>Rio de Janeiro</option>
+            <option value="Salvador" <?= (isset($destino) && $destino === 'Salvador') ? 'selected' : '' ?>>Salvador</option>
+            <option value="Porto Alegre" <?= (isset($destino) && $destino === 'Porto Alegre') ? 'selected' : '' ?>>Porto Alegre</option>
+            <option value="Espirito Santo" <?= (isset($destino) && $destino === 'Espirito Santo') ? 'selected' : '' ?>>Espirito Santo</option>
+            <option value="Icaraí de Amontada" <?= (isset($destino) && $destino === 'Icaraí de Amontada') ? 'selected' : '' ?>>Icaraí de Amontada</option>
+            <option value="Nobres" <?= (isset($destino) && $destino === 'Nobres') ? 'selected' : '' ?>>Nobres</option>
+            <option value="Rio Grande do Sul" <?= (isset($destino) && $destino === 'Rio Grande do Sul') ? 'selected' : '' ?>>Rio Grande do Sul</option>
+            <option value="Balneário Camboriú" <?= (isset($destino) && $destino === 'Balneário Camboriú') ? 'selected' : '' ?>>Balneário Camboriú</option>
+            <option value="Jericoacoara" <?= (isset($destino) && $destino === 'Jericoacoara') ? 'selected' : '' ?>>Jericoacoara</option>
+            <option value="Veneza" <?= (isset($destino) && $destino === 'Veneza') ? 'selected' : '' ?>>Veneza</option>
+            <option value="Seoul" <?= (isset($destino) && $destino === 'Seoul') ? 'selected' : '' ?>>Seoul</option>
+            <option value="Istambul" <?= (isset($destino) && $destino === 'Istambul') ? 'selected' : '' ?>>Istambul</option>
+            <option value="Paris" <?= (isset($destino) && $destino === 'Paris') ? 'selected' : '' ?>>Paris</option>
+            <option value="Orlando" <?= (isset($destino) && $destino === 'Orlando') ? 'selected' : '' ?>>Orlando</option>
+            <option value="Singapura" <?= (isset($destino) && $destino === 'Singapura') ? 'selected' : '' ?>>Singapura</option>
+            <option value="Dubai" <?= (isset($destino) && $destino === 'Dubai') ? 'selected' : '' ?>>Dubai</option>
+            <option value="Tokyo" <?= (isset($destino) && $destino === 'Tokyo') ? 'selected' : '' ?>>Tokyo</option>
+            <option value="Moscou" <?= (isset($destino) && $destino === 'Moscou') ? 'selected' : '' ?>>Moscou</option>
+        </select>
+    </form>
+</div>
+  <form class="barra-busca">
+    <button type="submit" class="botao-lupa">
+        <img src="../src/assets/imagens/lupa.png" alt="Buscar">
+    </button>
+  </form>
+  
     <nav class="menu">
+      
        <div class="menu-container">
         
         <div class="menu-toggle" id="menuToggle">
@@ -36,8 +70,8 @@ if (session_status() === PHP_SESSION_NONE) {
       <div class="dropdown-content">
 
         <?php if (isset($_SESSION['id_usuario'])): ?>
-          <a href="../src/pages/conta.php" class="nav-link <?php echo ($pagina_atual === 'conta.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
-          <a href="../src/php/logout.php" class="nav-link">Sair</a>
+          <a href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+          <a href="../php/logout.php" class="nav-link">Sair</a>
         <?php else: ?>
           <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === 'login.php') ? 'ativo' : ''; ?>">Entrar</a>
           <a href="../src/pages/criar-conta.php" class="nav-link <?php echo ($pagina_atual === 'cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
